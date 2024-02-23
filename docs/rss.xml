@@ -4,10 +4,22 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Feb 2024 20:28:56 JST</pubDate>
-    <lastBuildDate>Fri, 23 Feb 2024 20:28:56 JST</lastBuildDate>
+    <pubDate>Fri, 23 Feb 2024 20:44:25 JST</pubDate>
+    <lastBuildDate>Fri, 23 Feb 2024 20:44:25 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>⌘ + ↓でページの一番下に移動する</title>
+    <pubDate>Sat, 24 Feb 2024 05:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/mac-page-bottom.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac-page-bottom.html</guid>
+  </item>
+  <item>
+    <title>Ubuntuのターミナルで入力中の文字列をクリアする方法</title>
+    <pubDate>Sat, 24 Feb 2024 05:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/ubuntu-terminal-input-clear.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/ubuntu-terminal-input-clear.html</guid>
+  </item>
   <item>
     <title>⌘</title>
     <pubDate>Sat, 24 Feb 2024 04:00:00 JST</pubDate>
