@@ -4,15 +4,21 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Mar 2024 22:29:08 JST</pubDate>
-    <lastBuildDate>Tue, 05 Mar 2024 22:29:08 JST</lastBuildDate>
+    <pubDate>Sat, 09 Mar 2024 15:52:38 JST</pubDate>
+    <lastBuildDate>Sat, 09 Mar 2024 15:52:38 JST</lastBuildDate>
   </channel>
   
   <item>
+    <title>Reactでrefオブジェクトのcurrentがnullの時確認すること</title>
+    <pubDate>Sun, 10 Mar 2024 00:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/react-ref-current-is-null.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/react-ref-current-is-null.html</guid>
+  </item>
+  <item>
     <title>Vimでカーソルがある{}ブロックを削除する</title>
     <pubDate>Wed, 06 Mar 2024 07:20:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/vim.delete-around-curly-braces.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/vim.delete-around-curly-braces.html</guid>
+    <link>https://japanese-document.github.io/memo/vim-delete-around-curly-braces.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/vim-delete-around-curly-braces.html</guid>
   </item>
   <item>
     <title>ChatGPTとプログラミングした感想</title>
