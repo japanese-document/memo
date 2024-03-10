@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Mar 2024 15:52:38 JST</pubDate>
-    <lastBuildDate>Sat, 09 Mar 2024 15:52:38 JST</lastBuildDate>
+    <pubDate>Sun, 10 Mar 2024 12:16:31 JST</pubDate>
+    <lastBuildDate>Sun, 10 Mar 2024 12:16:31 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>ジェネリクスに対応したビルトインパッケージ</title>
+    <pubDate>Sun, 10 Mar 2024 21:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go-generics-builtin-packages.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go-generics-builtin-packages.html</guid>
+  </item>
   <item>
     <title>Reactでrefオブジェクトのcurrentがnullの時確認すること</title>
     <pubDate>Sun, 10 Mar 2024 00:30:00 JST</pubDate>
