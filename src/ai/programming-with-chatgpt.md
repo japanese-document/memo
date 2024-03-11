@@ -17,5 +17,5 @@
     * 明確な回答を提供する。
     * フレンドリーでもったいぶらない対話スタイルだと思います。
 
-![chat](images/ai-programming-with-chatgpt.jpg)
+![chat](../images/ai-programming-with-chatgpt.jpg)
 
