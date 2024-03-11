@@ -4,50 +4,50 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Mar 2024 12:16:31 JST</pubDate>
-    <lastBuildDate>Sun, 10 Mar 2024 12:16:31 JST</lastBuildDate>
+    <pubDate>Mon, 11 Mar 2024 21:04:48 JST</pubDate>
+    <lastBuildDate>Mon, 11 Mar 2024 21:04:48 JST</lastBuildDate>
   </channel>
   
   <item>
     <title>ジェネリクスに対応したビルトインパッケージ</title>
     <pubDate>Sun, 10 Mar 2024 21:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/go-generics-builtin-packages.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/go-generics-builtin-packages.html</guid>
+    <link>https://japanese-document.github.io/memo/go/generics-builtin-packages.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/generics-builtin-packages.html</guid>
   </item>
   <item>
     <title>Reactでrefオブジェクトのcurrentがnullの時確認すること</title>
     <pubDate>Sun, 10 Mar 2024 00:30:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/react-ref-current-is-null.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/react-ref-current-is-null.html</guid>
+    <link>https://japanese-document.github.io/memo/react/ref-current-is-null.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/ref-current-is-null.html</guid>
   </item>
   <item>
     <title>Vimでカーソルがある{}ブロックを削除する</title>
     <pubDate>Wed, 06 Mar 2024 07:20:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/vim-delete-around-curly-braces.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/vim-delete-around-curly-braces.html</guid>
+    <link>https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html</guid>
   </item>
   <item>
     <title>ChatGPTとプログラミングした感想</title>
     <pubDate>Sun, 25 Feb 2024 20:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/ai-programming-with-chatgpt.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/ai-programming-with-chatgpt.html</guid>
+    <link>https://japanese-document.github.io/memo/ai/programming-with-chatgpt.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/ai/programming-with-chatgpt.html</guid>
   </item>
   <item>
     <title>Ubuntuのターミナルで入力中の文字列をクリアする方法</title>
     <pubDate>Sat, 24 Feb 2024 09:10:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/ubuntu-terminal-input-clear.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/ubuntu-terminal-input-clear.html</guid>
+    <link>https://japanese-document.github.io/memo/ubuntu/terminal-input-clear.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/ubuntu/terminal-input-clear.html</guid>
   </item>
   <item>
     <title>⌘ + ↓でページの一番下に移動する</title>
     <pubDate>Sat, 24 Feb 2024 05:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/mac-page-bottom.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac-page-bottom.html</guid>
+    <link>https://japanese-document.github.io/memo/mac/page-bottom.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac/page-bottom.html</guid>
   </item>
   <item>
     <title>⌘</title>
     <pubDate>Sat, 24 Feb 2024 04:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/mac-command.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac-command.html</guid>
+    <link>https://japanese-document.github.io/memo/mac/command.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac/command.html</guid>
   </item>
 </rss>
