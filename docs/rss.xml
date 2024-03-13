@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Mar 2024 21:09:39 JST</pubDate>
-    <lastBuildDate>Mon, 11 Mar 2024 21:09:39 JST</lastBuildDate>
+    <pubDate>Wed, 13 Mar 2024 23:02:34 JST</pubDate>
+    <lastBuildDate>Wed, 13 Mar 2024 23:02:34 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>reduceを使った関数合成</title>
+    <pubDate>Thu, 14 Mar 2024 07:20:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/javascript/function composition-using-reduce.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/function composition-using-reduce.html</guid>
+  </item>
   <item>
     <title>ジェネリクスに対応したビルトインパッケージ</title>
     <pubDate>Sun, 10 Mar 2024 21:00:00 JST</pubDate>
