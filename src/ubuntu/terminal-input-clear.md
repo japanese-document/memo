@@ -4,4 +4,4 @@
 
 ctrl + u
 
-![](../../images/ubuntu-terminal-input-clear.jpg)
+![](../images/ubuntu-terminal-input-clear.jpg)
