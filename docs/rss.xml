@@ -4,10 +4,22 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Mar 2024 23:02:34 JST</pubDate>
-    <lastBuildDate>Wed, 13 Mar 2024 23:02:34 JST</lastBuildDate>
+    <pubDate>Thu, 14 Mar 2024 09:05:52 JST</pubDate>
+    <lastBuildDate>Thu, 14 Mar 2024 09:05:52 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>styled-componentsでコンポーネントにスタイルが適用されない</title>
+    <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</guid>
+  </item>
+  <item>
+    <title>styled-components用のpropsをコンポーネントに渡さない</title>
+    <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</guid>
+  </item>
   <item>
     <title>reduceを使った関数合成</title>
     <pubDate>Thu, 14 Mar 2024 07:20:00 JST</pubDate>
