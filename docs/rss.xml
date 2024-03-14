@@ -4,8 +4,8 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Mar 2024 09:05:52 JST</pubDate>
-    <lastBuildDate>Thu, 14 Mar 2024 09:05:52 JST</lastBuildDate>
+    <pubDate>Thu, 14 Mar 2024 09:10:56 JST</pubDate>
+    <lastBuildDate>Thu, 14 Mar 2024 09:10:56 JST</lastBuildDate>
   </channel>
   
   <item>
@@ -23,8 +23,8 @@
   <item>
     <title>reduceを使った関数合成</title>
     <pubDate>Thu, 14 Mar 2024 07:20:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/javascript/function composition-using-reduce.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/function composition-using-reduce.html</guid>
+    <link>https://japanese-document.github.io/memo/javascript/function-composition-using-reduce.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/function-composition-using-reduce.html</guid>
   </item>
   <item>
     <title>ジェネリクスに対応したビルトインパッケージ</title>
