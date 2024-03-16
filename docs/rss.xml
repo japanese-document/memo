@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Mar 2024 09:20:58 JST</pubDate>
-    <lastBuildDate>Thu, 14 Mar 2024 09:20:58 JST</lastBuildDate>
+    <pubDate>Sat, 16 Mar 2024 16:49:39 JST</pubDate>
+    <lastBuildDate>Sat, 16 Mar 2024 16:49:39 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>VSCodeでエラーにジャンプするにはF8</title>
+    <pubDate>Sun, 17 Mar 2024 00:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/vscode/jump-to-error.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/vscode/jump-to-error.html</guid>
+  </item>
   <item>
     <title>styled-componentsでコンポーネントにスタイルが適用されない</title>
     <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
