@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Mar 2024 16:49:39 JST</pubDate>
-    <lastBuildDate>Sat, 16 Mar 2024 16:49:39 JST</lastBuildDate>
+    <pubDate>Mon, 18 Mar 2024 20:47:41 JST</pubDate>
+    <lastBuildDate>Mon, 18 Mar 2024 20:47:41 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>Goのinterfaceのunionsの例</title>
+    <pubDate>Tue, 19 Mar 2024 04:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/interface-unions.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/interface-unions.html</guid>
+  </item>
   <item>
     <title>VSCodeでエラーにジャンプするにはF8</title>
     <pubDate>Sun, 17 Mar 2024 00:30:00 JST</pubDate>

@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html" />
-    <meta property="og:title" content="styled-components用のpropsをコンポーネントに渡さない" />
-    <meta property="og:description" content="styled-components用のpropsをコンポーネントに渡さないようにするには、渡したくないpropsの名前の先頭に。詳しくはこちらを見てください。" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/go/interface-unions.html" />
+    <meta property="og:title" content="Goのinterfaceのunionsの例" />
+    <meta property="og:description" content="package mainimport &#34;fmt&#34;type Foo struct {	foo string}type Bar struct {	bar string}type Baz interface {	Foo | Bar}func f[T Baz](a T) {	switch b := any(a).(type) {	case Foo:		fmt.Println(b.foo)	case Bar:		fmt.Println(b.bar)	}}func main() {	a := Foo{foo: &#34;foo&#34;}	b := Bar{bar: &#34;bar&amp;#3" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="styled-components用のpropsをコンポーネントに渡さないようにするには、渡したくないpropsの名前の先頭に。詳しくはこちらを見てください。" />
+    <meta name="description" content="package mainimport &#34;fmt&#34;type Foo struct {	foo string}type Bar struct {	bar string}type Baz interface {	Foo | Bar}func f[T Baz](a T) {	switch b := any(a).(type) {	case Foo:		fmt.Println(b.foo)	case Bar:		fmt.Println(b.bar)	}}func main() {	a := Foo{foo: &#34;foo&#34;}	b := Bar{bar: &#34;bar&amp;#3" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>styled-components用のpropsをコンポーネントに渡さない</title>
+    <title>Goのinterfaceのunionsの例</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -62,12 +62,42 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="styled-components用のpropsをコンポーネントに渡さない"><a href="#styled-components%E7%94%A8%E3%81%AEprops%E3%82%92%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%AB%E6%B8%A1%E3%81%95%E3%81%AA%E3%81%84" rel="nofollow">styled-components用のpropsをコンポーネントに渡さない</a></h1>
-<p>styled-components用のpropsをコンポーネントに渡さないようにするには、渡したくないpropsの名前の先頭に<code>$</code>を付けます。
-詳しくは<a href="https://styled-components.com/docs/api#transient-props" class="Link" rel="nofollow">こちら</a>を見てください。</p>
+      <h1 id="Goのinterfaceのunionsの例"><a href="#Go%E3%81%AEinterface%E3%81%AEunions%E3%81%AE%E4%BE%8B" rel="nofollow">Goのinterfaceのunionsの例</a></h1>
+<pre><code>package main
+
+import &#34;fmt&#34;
+
+type Foo struct {
+	foo string
+}
+
+type Bar struct {
+	bar string
+}
+
+type Baz interface {
+	Foo | Bar
+}
+
+func f[T Baz](a T) {
+	switch b := any(a).(type) {
+	case Foo:
+		fmt.Println(b.foo)
+	case Bar:
+		fmt.Println(b.bar)
+	}
+}
+
+func main() {
+	a := Foo{foo: &#34;foo&#34;}
+	b := Bar{bar: &#34;bar&#34;}
+	f(a)
+	f(b)
+}
+</code></pre>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#styled-components%E7%94%A8%E3%81%AEprops%E3%82%92%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%AB%E6%B8%A1%E3%81%95%E3%81%AA%E3%81%84" rel="nofollow">styled-components用のpropsをコンポーネントに渡さない
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Go%E3%81%AEinterface%E3%81%AEunions%E3%81%AE%E4%BE%8B" rel="nofollow">Goのinterfaceのunionsの例
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
