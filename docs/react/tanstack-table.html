@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/vscode/jump-to-error.html" />
-    <meta property="og:title" content="VSCodeでエラーにジャンプするにはF8" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/react/tanstack-table.html" />
+    <meta property="og:title" content="TanStack Tableメモ" />
+    <meta property="og:description" content="TanStack TableのTDataTanStack TableのTDataはデーブルの行を表すオブジェクトの型です。Accessor Columnsaccessor keycolumnHelper.accessor()の第1引数またはaccessorKeyにはTDataのキーを指定します。動的に値を生成するcolumnHelper.accessor()の第1引数も�" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="" />
+    <meta name="description" content="TanStack TableのTDataTanStack TableのTDataはデーブルの行を表すオブジェクトの型です。Accessor Columnsaccessor keycolumnHelper.accessor()の第1引数またはaccessorKeyにはTDataのキーを指定します。動的に値を生成するcolumnHelper.accessor()の第1引数も�" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>VSCodeでエラーにジャンプするにはF8</title>
+    <title>TanStack Tableメモ</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -63,10 +63,35 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="VSCodeでエラーにジャンプするにはF8"><a href="#VSCode%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AFF8" rel="nofollow">VSCodeでエラーにジャンプするにはF8</a></h1>
+      <h1 id="TanStack_Tableメモ"><a href="#TanStack_Table%E3%83%A1%E3%83%A2" rel="nofollow">TanStack Tableメモ</a></h1>
+<h2 id="TanStack_TableのTData"><a href="#TanStack_Table%E3%81%AETData" rel="nofollow">TanStack TableのTData</a></h2>
+<p>TanStack Tableの<code>TData</code>はデーブルの行を表す<a href="https://tanstack.com/table/latest/docs/guide/tables#defining-data" class="Link" rel="nofollow">オブジェクトの型</a>です。</p>
+<h2 id="Accessor_Columns"><a href="#Accessor_Columns" rel="nofollow">Accessor Columns</a></h2>
+<h3 id="accessor_key"><a href="#accessor_key" rel="nofollow">accessor key</a></h3>
+<p><code>columnHelper.accessor()</code>の第1引数または<code>accessorKey</code>には<code>TData</code>の<a href="https://tanstack.com/table/latest/docs/guide/column-defs#object-keys" class="Link" rel="nofollow">キーを指定します</a>。</p>
+<h3><a href="#%E5%8B%95%E7%9A%84%E3%81%AB%E5%80%A4%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B" rel="nofollow">動的に値を生成する</a></h3>
+<p><code>columnHelper.accessor()</code>の第1引数もしくは<code>accessorFn</code>に<a href="https://tanstack.com/table/latest/docs/guide/column-defs#accessor-functions" class="Link" rel="nofollow">accessor functions</a>を渡します。</p>
+<h3 id="id"><a href="#id" rel="nofollow">id</a></h3>
+<p>accessor keyは<a href="https://tanstack.com/table/latest/docs/guide/column-defs#unique-column-ids" class="Link" rel="nofollow">idにになる</a>。</p>
+<h3 id="footerとheader"><a href="#footer%E3%81%A8header" rel="nofollow">footerとheader</a></h3>
+<p>Accessor columnsのfooterとheaderの例</p>
+<p><a href="https://github.com/TanStack/table/blob/main/examples/react/basic/src/main.tsx" rel="nofollow">https://github.com/TanStack/table/blob/main/examples/react/basic/src/main.tsx</a>
+<a href="https://tanstack.com/table/latest/docs/framework/react/examples/basic" rel="nofollow">https://tanstack.com/table/latest/docs/framework/react/examples/basic</a></p>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#VSCode%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AFF8" rel="nofollow">VSCodeでエラーにジャンプするにはF8
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#TanStack_Table%E3%83%A1%E3%83%A2" rel="nofollow">TanStack Tableメモ
+</a></p>
+<p class="h2"><a href="#TanStack_Table%E3%81%AETData" rel="nofollow">TanStack TableのTData
+</a></p>
+<p class="h2"><a href="#Accessor_Columns" rel="nofollow">Accessor Columns
+</a></p>
+<p class="h3"><a href="#accessor_key" rel="nofollow">accessor key
+</a></p>
+<p class="h3"><a href="#%E5%8B%95%E7%9A%84%E3%81%AB%E5%80%A4%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B" rel="nofollow">動的に値を生成する
+</a></p>
+<p class="h3"><a href="#id" rel="nofollow">id
+</a></p>
+<p class="h3"><a href="#footer%E3%81%A8header" rel="nofollow">footerとheader
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
