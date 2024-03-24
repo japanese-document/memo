@@ -24,5 +24,14 @@ accessor keyは[idにになる](https://tanstack.com/table/latest/docs/guide/col
 
 Accessor columnsのfooterとheaderの例
 
-https://github.com/TanStack/table/blob/main/examples/react/basic/src/main.tsx
-https://tanstack.com/table/latest/docs/framework/react/examples/basic  
+* https://github.com/TanStack/table/blob/main/examples/react/basic/src/main.tsx
+
+* https://tanstack.com/table/latest/docs/framework/react/examples/basic  
+
+### aggregatedCell
+
+Accessor columnsのaggregatedCellの例
+
+* https://github.com/TanStack/table/blob/main/examples/react/grouping/src/main.tsx
+
+* https://tanstack.com/table/latest/docs/framework/react/examples/grouping
