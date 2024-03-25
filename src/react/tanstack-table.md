@@ -1,4 +1,4 @@
-{ "category": "React",  "order": 3, "date": "2024-03-24 13:10" }
+{ "category": "React",  "order": 3, "date": "2024-03-25 23:10" }
 ---
 # TanStack Tableメモ
 
@@ -35,3 +35,13 @@ Accessor columnsのaggregatedCellの例
 * https://github.com/TanStack/table/blob/main/examples/react/grouping/src/main.tsx
 
 * https://tanstack.com/table/latest/docs/framework/react/examples/grouping
+
+## State
+
+`on[State]Change`は`onColumnFiltersChange`や`onSortingChange`等の総称
+
+
+`on[State]Change`や`onStateChange`の引数には値かReactの`setState()`コールバック関数が渡される。  
+https://tanstack.com/table/latest/docs/framework/react/guide/table-state#on-state-change-callbacks
+
+State用の[型](https://tanstack.com/table/latest/docs/framework/react/guide/table-state#state-types)がある。
