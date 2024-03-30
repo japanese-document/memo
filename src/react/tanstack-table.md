@@ -2,6 +2,15 @@
 ---
 # TanStack Tableメモ
 
+## [useReactTable](https://tanstack.com/table/latest/docs/api/core/table#usereacttable--createsolidtable--useqwiktable--usevuetable--createsveltetable)
+
+### data
+TDataの配列
+
+### columns
+columnHelper.accessor等を使って作成する
+
+
 ## TanStack TableのTData
 
 TanStack Tableの`TData`はデーブルの行を表す[オブジェクトの型](https://tanstack.com/table/latest/docs/guide/tables#defining-data)です。
@@ -39,6 +48,7 @@ Accessor columnsのaggregatedCellの例
 ## State
 
 `on[State]Change`は`onColumnFiltersChange`や`onSortingChange`等の総称です。`[State]`には`state`のキーが入ります。
+
 
 
 `on[State]Change`や`onStateChange`の引数には値かReactの`setState()`コールバック関数が渡される。  
