@@ -49,8 +49,6 @@ Accessor columnsのaggregatedCellの例
 
 `on[State]Change`は`onColumnFiltersChange`や`onSortingChange`等の総称です。`[State]`には`state`のキーが入ります。
 
-
-
 `on[State]Change`や`onStateChange`の引数には値かReactの`setState()`コールバック関数が渡される。  
 https://tanstack.com/table/latest/docs/framework/react/guide/table-state#on-state-change-callbacks
 
