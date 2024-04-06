@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Apr 2024 21:33:29 JST</pubDate>
-    <lastBuildDate>Thu, 04 Apr 2024 21:33:29 JST</lastBuildDate>
+    <pubDate>Sat, 06 Apr 2024 14:43:01 JST</pubDate>
+    <lastBuildDate>Sat, 06 Apr 2024 14:43:01 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>gqlgen generateがうまくいかない</title>
+    <pubDate>Sat, 06 Apr 2024 23:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/gqlgen-generate-does-not-work.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/gqlgen-generate-does-not-work.html</guid>
+  </item>
   <item>
     <title>折り畳み</title>
     <pubDate>Fri, 05 Apr 2024 06:30:00 JST</pubDate>
