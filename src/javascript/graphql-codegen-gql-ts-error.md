@@ -8,7 +8,8 @@
 Variable 'documents' implicitly has type 'any[]' in some locations where its type cannot be determined.
 ```
 
-`codegen.ts`の`documents`に指定しているファイルに以下のようなクエリを記述して`graphql-codegen`を実行することでエラーが消えます。
+`codegen.ts`の`documents`に指定しているファイルに以下のようなクエリを記述します。
+そして、`graphql-codegen`を実行すると、エラーが消えます。
 
 ```ts
 const GET_CARS = gql(/* GraphQL */ `

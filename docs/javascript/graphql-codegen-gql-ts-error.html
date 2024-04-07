@@ -71,7 +71,8 @@
 <p><code>graphql-codegen</code>を実行すると<code>gql.ts</code>で下記のようなエラーが発生しました。</p>
 <pre><code>Variable &#39;documents&#39; implicitly has type &#39;any[]&#39; in some locations where its type cannot be determined.
 </code></pre>
-<p><code>codegen.ts</code>の<code>documents</code>に指定しているファイルに以下のようなクエリを記述して<code>graphql-codegen</code>を実行することでエラーが消えます。</p>
+<p><code>codegen.ts</code>の<code>documents</code>に指定しているファイルに以下のようなクエリを記述します。
+そして、<code>graphql-codegen</code>を実行すると、エラーが消えます。</p>
 <pre><code>const GET_CARS = gql(/* GraphQL */ `
 query findCars {
   cars {
