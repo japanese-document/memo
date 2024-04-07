@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Apr 2024 14:43:01 JST</pubDate>
-    <lastBuildDate>Sat, 06 Apr 2024 14:43:01 JST</lastBuildDate>
+    <pubDate>Sun, 07 Apr 2024 14:51:14 JST</pubDate>
+    <lastBuildDate>Sun, 07 Apr 2024 14:51:14 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>graphql-codegenを実行するとgql.tsがエラーになる</title>
+    <pubDate>Sun, 07 Apr 2024 23:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/javascript/graphql-codegen-gql-ts-error.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/graphql-codegen-gql-ts-error.html</guid>
+  </item>
   <item>
     <title>gqlgen generateがうまくいかない</title>
     <pubDate>Sat, 06 Apr 2024 23:30:00 JST</pubDate>
