@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Apr 2024 14:54:47 JST</pubDate>
-    <lastBuildDate>Sun, 07 Apr 2024 14:54:47 JST</lastBuildDate>
+    <pubDate>Sun, 07 Apr 2024 15:17:22 JST</pubDate>
+    <lastBuildDate>Sun, 07 Apr 2024 15:17:22 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>Apolloとgraphql-codegenを使う</title>
+    <pubDate>Mon, 08 Apr 2024 00:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/javascript/graphql-codegen-client-preset.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/graphql-codegen-client-preset.html</guid>
+  </item>
   <item>
     <title>graphql-codegenを実行するとgql.tsがエラーになる</title>
     <pubDate>Sun, 07 Apr 2024 23:00:00 JST</pubDate>
