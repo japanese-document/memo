@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Apr 2024 15:17:22 JST</pubDate>
-    <lastBuildDate>Sun, 07 Apr 2024 15:17:22 JST</lastBuildDate>
+    <pubDate>Sat, 13 Apr 2024 20:29:20 JST</pubDate>
+    <lastBuildDate>Sat, 13 Apr 2024 20:29:20 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>gqlgenで浅くデータを取得する方法</title>
+    <pubDate>Sat, 13 Apr 2024 23:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html</guid>
+  </item>
   <item>
     <title>Apolloとgraphql-codegenを使う</title>
     <pubDate>Mon, 08 Apr 2024 00:00:00 JST</pubDate>
@@ -57,16 +63,16 @@
     <guid isPermaLink="true">https://japanese-document.github.io/memo/vscode/jump-to-error.html</guid>
   </item>
   <item>
-    <title>styled-componentsでコンポーネントにスタイルが適用されない</title>
-    <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</guid>
-  </item>
-  <item>
     <title>styled-components用のpropsをコンポーネントに渡さない</title>
     <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</guid>
+  </item>
+  <item>
+    <title>styled-componentsでコンポーネントにスタイルが適用されない</title>
+    <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</guid>
   </item>
   <item>
     <title>reduceを使った関数合成</title>
