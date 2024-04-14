@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Apr 2024 21:26:03 JST</pubDate>
-    <lastBuildDate>Sun, 14 Apr 2024 21:26:03 JST</lastBuildDate>
+    <pubDate>Mon, 15 Apr 2024 02:01:36 JST</pubDate>
+    <lastBuildDate>Mon, 15 Apr 2024 02:01:36 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>GraphQLのインターフェイスとユニオンの違い</title>
+    <pubDate>Mon, 15 Apr 2024 11:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/graphql/Interfaces-and-union.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/graphql/Interfaces-and-union.html</guid>
+  </item>
   <item>
     <title>gqlgenの入力変数のプロパティにnullをセットする方法</title>
     <pubDate>Sun, 14 Apr 2024 21:30:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Sat, 24 Feb 2024 05:00:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/mac/page-bottom.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/mac/page-bottom.html</guid>
-  </item>
-  <item>
-    <title>⌘</title>
-    <pubDate>Sat, 24 Feb 2024 04:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/mac/command.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac/command.html</guid>
   </item>
 </rss>
