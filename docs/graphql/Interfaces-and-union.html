@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html" />
-    <meta property="og:title" content="Vimでカーソルがある{}ブロックを削除する" />
-    <meta property="og:description" content="da}" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/graphql/Interfaces-and-union.html" />
+    <meta property="og:title" content="GraphQLのインターフェイスとユニオンの違い" />
+    <meta property="og:description" content="インターフェイス(Interfaces)はクエリで共通部分をまとめて記述することができるが、ユニオン(Union)はできない。下記の例では、どちらもインラインフラグメント(Inline Fragments)を使っています。インラインフラグメントはク�" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="da}" />
+    <meta name="description" content="インターフェイス(Interfaces)はクエリで共通部分をまとめて記述することができるが、ユニオン(Union)はできない。下記の例では、どちらもインラインフラグメント(Inline Fragments)を使っています。インラインフラグメントはク�" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>Vimでカーソルがある{}ブロックを削除する</title>
+    <title>GraphQLのインターフェイスとユニオンの違い</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -74,11 +74,94 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="Vimでカーソルがある{}ブロックを削除する"><a href="#Vim%E3%81%A7%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB%E3%81%8C%E3%81%82%E3%82%8B%7B%7D%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B" rel="nofollow">Vimでカーソルがある{}ブロックを削除する</a></h1>
-<p><code>da}</code></p>
+      <h1 id="GraphQLのインターフェイスとユニオンの違い"><a href="#GraphQL%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%E3%81%A8%E3%83%A6%E3%83%8B%E3%82%AA%E3%83%B3%E3%81%AE%E9%81%95%E3%81%84" rel="nofollow">GraphQLのインターフェイスとユニオンの違い</a></h1>
+<p><a href="https://graphql.org/learn/schema/#interfaces" class="Link" rel="nofollow">インターフェイス(Interfaces)</a>はクエリで共通部分をまとめて記述することができるが、
+<a href="https://graphql.org/learn/schema/#union-types" class="Link" rel="nofollow">ユニオン(Union)</a>はできない。
+下記の例では、どちらも<a href="https://graphql.org/learn/queries/#inline-fragments" class="Link" rel="nofollow">インラインフラグメント(Inline Fragments)</a>を使っています。インラインフラグメントはクエリの戻り値の型に応じて戻り値のプロパティを変更することができます。</p>
+<h2 id="Interfaces"><a href="#Interfaces" rel="nofollow">Interfaces</a></h2>
+<h3><a href="#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E" rel="nofollow">スキーマ</a></h3>
+<pre><code>interface Foo {
+  propertyA: String
+}
+
+type Bar implements Foo {
+  propertyA: String
+  propertyB: Int
+}
+
+type Baz implements Foo {
+  propertyA: String
+  propertyC: Boolean
+}
+
+type Query {
+  foo: Foo
+}
+</code></pre>
+<h3><a href="#%E3%82%AF%E3%82%A8%E3%83%AA" rel="nofollow">クエリ</a></h3>
+<p>fooがBarの場合は<code>propertyA</code>と<code>propertyB</code>を返します。
+fooがBazの場合は<code>propertyA</code>と<code>propertyC</code>を返します。</p>
+<pre><code>query {
+  foo {
+    propertyA
+    ... on Bar {
+      propertyB
+    }
+    ... on Baz {
+      propertyC
+    }
+  }
+}
+</code></pre>
+<h2 id="Union"><a href="#Union" rel="nofollow">Union</a></h2>
+<h3><a href="#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E" rel="nofollow">スキーマ</a></h3>
+<pre><code>type Bar {
+  propertyA: String
+  propertyB: Int
+}
+
+type Baz {
+  propertyA: String
+  propertyC: Boolean
+}
+
+union FooUnion = Bar | Baz
+
+type Query {
+  foo: FooUnion
+}
+</code></pre>
+<h3><a href="#%E3%82%AF%E3%82%A8%E3%83%AA" rel="nofollow">クエリ</a></h3>
+<p>fooがBarの場合は<code>propertyA</code>と<code>propertyB</code>を返します。
+fooがBazの場合は<code>propertyA</code>と<code>propertyC</code>を返します。</p>
+<pre><code>query {
+  foo {
+    ... on Bar {
+      propertyA
+      propertyB
+    }
+    ... on Baz {
+      propertyA
+      propertyC
+    }
+  }
+}
+</code></pre>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Vim%E3%81%A7%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB%E3%81%8C%E3%81%82%E3%82%8B%7B%7D%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B" rel="nofollow">Vimでカーソルがある{}ブロックを削除する
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#GraphQL%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%E3%81%A8%E3%83%A6%E3%83%8B%E3%82%AA%E3%83%B3%E3%81%AE%E9%81%95%E3%81%84" rel="nofollow">GraphQLのインターフェイスとユニオンの違い
+</a></p>
+<p class="h2"><a href="#Interfaces" rel="nofollow">Interfaces
+</a></p>
+<p class="h3"><a href="#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E" rel="nofollow">スキーマ
+</a></p>
+<p class="h3"><a href="#%E3%82%AF%E3%82%A8%E3%83%AA" rel="nofollow">クエリ
+</a></p>
+<p class="h2"><a href="#Union" rel="nofollow">Union
+</a></p>
+<p class="h3"><a href="#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E" rel="nofollow">スキーマ
+</a></p>
+<p class="h3"><a href="#%E3%82%AF%E3%82%A8%E3%83%AA" rel="nofollow">クエリ
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
