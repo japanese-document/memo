@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Apr 2024 02:01:36 JST</pubDate>
-    <lastBuildDate>Mon, 15 Apr 2024 02:01:36 JST</lastBuildDate>
+    <pubDate>Tue, 16 Apr 2024 21:54:57 JST</pubDate>
+    <lastBuildDate>Tue, 16 Apr 2024 21:54:57 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>gqlgenのschemaとresolverを分割する</title>
+    <pubDate>Wed, 17 Apr 2024 07:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/graphql/gqlgen-divide-schema-and-resolver.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/graphql/gqlgen-divide-schema-and-resolver.html</guid>
+  </item>
   <item>
     <title>GraphQLのインターフェイスとユニオンの違い</title>
     <pubDate>Mon, 15 Apr 2024 11:00:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Sat, 24 Feb 2024 09:10:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/ubuntu/terminal-input-clear.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/ubuntu/terminal-input-clear.html</guid>
-  </item>
-  <item>
-    <title>⌘ + ↓でページの一番下に移動する</title>
-    <pubDate>Sat, 24 Feb 2024 05:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/mac/page-bottom.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/mac/page-bottom.html</guid>
   </item>
 </rss>
