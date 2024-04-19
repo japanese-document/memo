@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html" />
-    <meta property="og:title" content="gqlgenで浅くデータを取得する方法" />
-    <meta property="og:description" content="https://gqlgen.com/getting-started/#dont-eagerly-fetch-the-user上記のModelの時に効率的なSQLを実行する方法https://gqlgen.com/reference/dataloaders/" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/go/array-unshift.html" />
+    <meta property="og:title" content="GoでArray.unshift()を行う" />
+    <meta property="og:description" content="GoでJavaScriptのArray.unshift()のような処理を行うには以下のようにします。package mainimport &#34;fmt&#34;func main() {	a := []int{1, 2, 3}	a = append([]int{0}, a...)	// [0 1 2 3]	fmt.Print(a)}" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="https://gqlgen.com/getting-started/#dont-eagerly-fetch-the-user上記のModelの時に効率的なSQLを実行する方法https://gqlgen.com/reference/dataloaders/" />
+    <meta name="description" content="GoでJavaScriptのArray.unshift()のような処理を行うには以下のようにします。package mainimport &#34;fmt&#34;func main() {	a := []int{1, 2, 3}	a = append([]int{0}, a...)	// [0 1 2 3]	fmt.Print(a)}" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>gqlgenで浅くデータを取得する方法</title>
+    <title>GoでArray.unshift()を行う</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -77,13 +77,22 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="gqlgenで浅くデータを取得する方法"><a href="#gqlgen%E3%81%A7%E6%B5%85%E3%81%8F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95" rel="nofollow">gqlgenで浅くデータを取得する方法</a></h1>
-<p><a href="https://gqlgen.com/getting-started/#dont-eagerly-fetch-the-user" rel="nofollow">https://gqlgen.com/getting-started/#dont-eagerly-fetch-the-user</a></p>
-<p>上記のModelの時に効率的なSQLを実行する方法</p>
-<p><a href="https://gqlgen.com/reference/dataloaders/" rel="nofollow">https://gqlgen.com/reference/dataloaders/</a></p>
+      <h1 id="GoでArray.unshift()を行う"><a href="#Go%E3%81%A7Array.unshift()%E3%82%92%E8%A1%8C%E3%81%86" rel="nofollow">GoでArray.unshift()を行う</a></h1>
+<p>GoでJavaScriptの<code>Array.unshift()</code>のような処理を行うには以下のようにします。</p>
+<pre><code>package main
+
+import &#34;fmt&#34;
+
+func main() {
+	a := []int{1, 2, 3}
+	a = append([]int{0}, a...)
+	// [0 1 2 3]
+	fmt.Print(a)
+}
+</code></pre>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#gqlgen%E3%81%A7%E6%B5%85%E3%81%8F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95" rel="nofollow">gqlgenで浅くデータを取得する方法
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Go%E3%81%A7Array.unshift()%E3%82%92%E8%A1%8C%E3%81%86" rel="nofollow">GoでArray.unshift()を行う
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
