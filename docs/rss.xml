@@ -4,10 +4,22 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Apr 2024 21:54:57 JST</pubDate>
-    <lastBuildDate>Tue, 16 Apr 2024 21:54:57 JST</lastBuildDate>
+    <pubDate>Fri, 19 Apr 2024 20:13:31 JST</pubDate>
+    <lastBuildDate>Fri, 19 Apr 2024 20:13:31 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>GoでArray.unshift()を行う</title>
+    <pubDate>Sat, 20 Apr 2024 05:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/array-unshift.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/array-unshift.html</guid>
+  </item>
+  <item>
+    <title>Introspectionから型を生成する</title>
+    <pubDate>Sat, 20 Apr 2024 05:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/graphql/make-types-from-introspection.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/graphql/make-types-from-introspection.html</guid>
+  </item>
   <item>
     <title>gqlgenのschemaとresolverを分割する</title>
     <pubDate>Wed, 17 Apr 2024 07:00:00 JST</pubDate>
@@ -115,17 +127,5 @@
     <pubDate>Wed, 06 Mar 2024 07:20:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html</guid>
-  </item>
-  <item>
-    <title>ChatGPTとプログラミングした感想</title>
-    <pubDate>Sun, 25 Feb 2024 20:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/ai/programming-with-chatgpt.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/ai/programming-with-chatgpt.html</guid>
-  </item>
-  <item>
-    <title>Ubuntuのターミナルで入力中の文字列をクリアする方法</title>
-    <pubDate>Sat, 24 Feb 2024 09:10:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/ubuntu/terminal-input-clear.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/ubuntu/terminal-input-clear.html</guid>
   </item>
 </rss>
