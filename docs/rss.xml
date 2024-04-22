@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Apr 2024 20:13:31 JST</pubDate>
-    <lastBuildDate>Fri, 19 Apr 2024 20:13:31 JST</lastBuildDate>
+    <pubDate>Mon, 22 Apr 2024 22:10:53 JST</pubDate>
+    <lastBuildDate>Mon, 22 Apr 2024 22:10:53 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>gqlgenで浅くデータを取得する方法</title>
+    <pubDate>Mon, 22 Apr 2024 23:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html</guid>
+  </item>
   <item>
     <title>GoでArray.unshift()を行う</title>
     <pubDate>Sat, 20 Apr 2024 05:30:00 JST</pubDate>
@@ -37,12 +43,6 @@
     <pubDate>Sun, 14 Apr 2024 21:30:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/go/gqlgen-set-null-to-property.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/go/gqlgen-set-null-to-property.html</guid>
-  </item>
-  <item>
-    <title>gqlgenで浅くデータを取得する方法</title>
-    <pubDate>Sat, 13 Apr 2024 23:30:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/gqlgen-get-shallow-data.html</guid>
   </item>
   <item>
     <title>Apolloとgraphql-codegenを使う</title>
