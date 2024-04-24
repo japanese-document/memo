@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Apr 2024 22:10:53 JST</pubDate>
-    <lastBuildDate>Mon, 22 Apr 2024 22:10:53 JST</lastBuildDate>
+    <pubDate>Wed, 24 Apr 2024 23:24:33 JST</pubDate>
+    <lastBuildDate>Wed, 24 Apr 2024 23:24:33 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>sqlmockメモ</title>
+    <pubDate>Thu, 25 Apr 2024 07:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/sqlmock.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/sqlmock.html</guid>
+  </item>
   <item>
     <title>gqlgenで浅くデータを取得する方法</title>
     <pubDate>Mon, 22 Apr 2024 23:30:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Sun, 10 Mar 2024 00:30:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/react/ref-current-is-null.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/react/ref-current-is-null.html</guid>
-  </item>
-  <item>
-    <title>Vimでカーソルがある{}ブロックを削除する</title>
-    <pubDate>Wed, 06 Mar 2024 07:20:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/vim/delete-around-curly-braces.html</guid>
   </item>
 </rss>

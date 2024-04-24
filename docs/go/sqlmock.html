@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/react/ref-current-is-null.html" />
-    <meta property="og:title" content="Reactでrefオブジェクトのcurrentがnullの時確認すること" />
-    <meta property="og:description" content="refオブジェクトを複数のコンポーネントを経由している場合、途中でprops.refにセットしていないか確認する。その場合、途中ではprops.refにセットしないようにする。" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/go/sqlmock.html" />
+    <meta property="og:title" content="sqlmockメモ" />
+    <meta property="og:description" content="WithArgs()に任意の引数を指定するにはsqlmock.AnyArg()を渡す。sqlxと一緒に使う方法db, mock, err := sqlmock.New()defer db.Close()sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) ExpectExec()に渡す引数はregex.QuoteMeta()を適用して使うと便利" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="refオブジェクトを複数のコンポーネントを経由している場合、途中でprops.refにセットしていないか確認する。その場合、途中ではprops.refにセットしないようにする。" />
+    <meta name="description" content="WithArgs()に任意の引数を指定するにはsqlmock.AnyArg()を渡す。sqlxと一緒に使う方法db, mock, err := sqlmock.New()defer db.Close()sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) ExpectExec()に渡す引数はregex.QuoteMeta()を適用して使うと便利" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>Reactでrefオブジェクトのcurrentがnullの時確認すること</title>
+    <title>sqlmockメモ</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -78,12 +78,25 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="Reactでrefオブジェクトのcurrentがnullの時確認すること"><a href="#React%E3%81%A7ref%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AEcurrent%E3%81%8Cnull%E3%81%AE%E6%99%82%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8" rel="nofollow">Reactでrefオブジェクトのcurrentがnullの時確認すること</a></h1>
-<p>refオブジェクトを複数のコンポーネントを経由している場合、途中で<code>props.ref</code>にセットしていないか確認する。
-その場合、途中では<code>props.ref</code>にセットしないようにする。</p>
+      <h1 id="sqlmockメモ"><a href="#sqlmock%E3%83%A1%E3%83%A2" rel="nofollow">sqlmockメモ</a></h1>
+<ul>
+<li>
+<p><code>WithArgs()</code>に任意の引数を指定するには<code>sqlmock.AnyArg()</code>を渡す。</p>
+</li>
+<li>
+<p><a href="https://japanese-document.github.io/sqlx/" class="Link" rel="nofollow">sqlx</a>と一緒に使う方法</p>
+</li>
+</ul>
+<pre><code>db, mock, err := sqlmock.New()
+defer db.Close()
+sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) 
+</code></pre>
+<ul>
+<li><code>ExpectExec()</code>に渡す引数は<a href="https://pkg.go.dev/regexp#QuoteMeta" class="Link" rel="nofollow">regex.QuoteMeta()</a>を適用して使うと便利</li>
+</ul>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#React%E3%81%A7ref%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AEcurrent%E3%81%8Cnull%E3%81%AE%E6%99%82%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8" rel="nofollow">Reactでrefオブジェクトのcurrentがnullの時確認すること
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#sqlmock%E3%83%A1%E3%83%A2" rel="nofollow">sqlmockメモ
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
