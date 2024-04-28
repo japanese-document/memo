@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/javascript/graphql-codegen-gql-ts-error.html" />
-    <meta property="og:title" content="graphql-codegenを実行するとgql.tsがエラーになる" />
-    <meta property="og:description" content="graphql-codegenを実行するとgql.tsで下記のようなエラーが発生しました。Variable &#39;documents&#39; implicitly has type &#39;any[]&#39; in some locations where its type cannot be determined.codegen.tsのdocumentsに指定しているファイルに以下のようなクエリを" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/javascript/url-can-parse.html" />
+    <meta property="og:title" content="JavaScriptでURLが有効か判別する" />
+    <meta property="og:description" content="JavaScriptでURLが有効か判別するにはURL.canParse()を使います。URL.canParse(&#39;https://example.com/foo#bar?a=1&amp;b=2&#39;)// trueURL.canParse(&#39;foobar&#39;)// false" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="graphql-codegenを実行するとgql.tsで下記のようなエラーが発生しました。Variable &#39;documents&#39; implicitly has type &#39;any[]&#39; in some locations where its type cannot be determined.codegen.tsのdocumentsに指定しているファイルに以下のようなクエリを" />
+    <meta name="description" content="JavaScriptでURLが有効か判別するにはURL.canParse()を使います。URL.canParse(&#39;https://example.com/foo#bar?a=1&amp;b=2&#39;)// trueURL.canParse(&#39;foobar&#39;)// false" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>graphql-codegenを実行するとgql.tsがエラーになる</title>
+    <title>JavaScriptでURLが有効か判別する</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -79,26 +79,16 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="graphql-codegenを実行するとgql.tsがエラーになる"><a href="#graphql-codegen%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%81%A8gql.ts%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%AA%E3%82%8B" rel="nofollow">graphql-codegenを実行するとgql.tsがエラーになる</a></h1>
-<p><code>graphql-codegen</code>を実行すると<code>gql.ts</code>で下記のようなエラーが発生しました。</p>
-<pre><code>Variable &#39;documents&#39; implicitly has type &#39;any[]&#39; in some locations where its type cannot be determined.
-</code></pre>
-<p><code>codegen.ts</code>の<code>documents</code>に指定しているファイルに以下のようなクエリを記述します。
-そして、<code>graphql-codegen</code>を実行すると、エラーが消えます。</p>
-<pre><code>const GET_CARS = gql(/* GraphQL */ `
-query findCars {
-  cars {
-    name
-    price
-    user {
-      name
-    }
-  }
-}`);
+      <h1 id="JavaScriptでURLが有効か判別する"><a href="#JavaScript%E3%81%A7URL%E3%81%8C%E6%9C%89%E5%8A%B9%E3%81%8B%E5%88%A4%E5%88%A5%E3%81%99%E3%82%8B" rel="nofollow">JavaScriptでURLが有効か判別する</a></h1>
+<p>JavaScriptでURLが有効か判別するには<a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/canParse_static" class="Link" rel="nofollow">URL.canParse()</a>を使います。</p>
+<pre><code>URL.canParse(&#39;https://example.com/foo#bar?a=1&amp;b=2&#39;)
+// true
+URL.canParse(&#39;foobar&#39;)
+// false
 </code></pre>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#graphql-codegen%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%81%A8gql.ts%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AB%E3%81%AA%E3%82%8B" rel="nofollow">graphql-codegenを実行するとgql.tsがエラーになる
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#JavaScript%E3%81%A7URL%E3%81%8C%E6%9C%89%E5%8A%B9%E3%81%8B%E5%88%A4%E5%88%A5%E3%81%99%E3%82%8B" rel="nofollow">JavaScriptでURLが有効か判別する
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
