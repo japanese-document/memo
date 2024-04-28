@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Apr 2024 23:24:33 JST</pubDate>
-    <lastBuildDate>Wed, 24 Apr 2024 23:24:33 JST</lastBuildDate>
+    <pubDate>Sun, 28 Apr 2024 14:49:43 JST</pubDate>
+    <lastBuildDate>Sun, 28 Apr 2024 14:49:43 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>JavaScriptでURLが有効か判別する</title>
+    <pubDate>Sun, 28 Apr 2024 23:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/javascript/url-can-parse.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/url-can-parse.html</guid>
+  </item>
   <item>
     <title>sqlmockメモ</title>
     <pubDate>Thu, 25 Apr 2024 07:30:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Sun, 10 Mar 2024 21:00:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/go/generics-builtin-packages.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/go/generics-builtin-packages.html</guid>
-  </item>
-  <item>
-    <title>Reactでrefオブジェクトのcurrentがnullの時確認すること</title>
-    <pubDate>Sun, 10 Mar 2024 00:30:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/react/ref-current-is-null.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/ref-current-is-null.html</guid>
   </item>
 </rss>
