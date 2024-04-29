@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Apr 2024 14:49:43 JST</pubDate>
-    <lastBuildDate>Sun, 28 Apr 2024 14:49:43 JST</lastBuildDate>
+    <pubDate>Mon, 29 Apr 2024 22:32:07 JST</pubDate>
+    <lastBuildDate>Mon, 29 Apr 2024 22:32:07 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>Apolloメモ</title>
+    <pubDate>Tue, 30 Apr 2024 07:00:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/graphql/apollo.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/graphql/apollo.html</guid>
+  </item>
   <item>
     <title>JavaScriptでURLが有効か判別する</title>
     <pubDate>Sun, 28 Apr 2024 23:00:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Thu, 14 Mar 2024 07:20:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/javascript/function-composition-using-reduce.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/function-composition-using-reduce.html</guid>
-  </item>
-  <item>
-    <title>ジェネリクスに対応したビルトインパッケージ</title>
-    <pubDate>Sun, 10 Mar 2024 21:00:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/go/generics-builtin-packages.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/generics-builtin-packages.html</guid>
   </item>
 </rss>
