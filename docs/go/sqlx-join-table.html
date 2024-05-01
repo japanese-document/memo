@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:url" content="https://japanese-document.github.io/memo/go/sqlx-join-table.html" />
-    <meta property="og:title" content="sqlxでjoinしたデーブルのデータを構造体にマッピングする" />
+    <meta property="og:title" content="sqlxでjoinしたテーブルのデータを構造体にマッピングする" />
     <meta property="og:description" content="以下のようにstruct tagsを付与したテーブルの型をjoinに対応した型に埋め込みます。package mainimport (	&#34;fmt&#34;	&#34;log&#34;	&#34;github.com/jmoiron/sqlx&#34;	_ &#34;github.com/mattn/go-sqlite3&#34;)type User struct {	ID    int    `db:&#34;id&#34;`	Name  string `db" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
     <meta name="description" content="以下のようにstruct tagsを付与したテーブルの型をjoinに対応した型に埋め込みます。package mainimport (	&#34;fmt&#34;	&#34;log&#34;	&#34;github.com/jmoiron/sqlx&#34;	_ &#34;github.com/mattn/go-sqlite3&#34;)type User struct {	ID    int    `db:&#34;id&#34;`	Name  string `db" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>sqlxでjoinしたデーブルのデータを構造体にマッピングする</title>
+    <title>sqlxでjoinしたテーブルのデータを構造体にマッピングする</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -58,7 +58,7 @@
 <p><a href="https://japanese-document.github.io/memo/go/gqlgen-set-null-to-property.html" rel="nofollow">gqlgenの入力変数のプロパティにnullをセットする方法</a></p>
 <p><a href="https://japanese-document.github.io/memo/go/array-unshift.html" rel="nofollow">GoでArray.unshift()を行う</a></p>
 <p><a href="https://japanese-document.github.io/memo/go/sqlmock.html" rel="nofollow">sqlmockメモ</a></p>
-<p><a href="https://japanese-document.github.io/memo/go/sqlx-join-table.html" rel="nofollow">sqlxでjoinしたデーブルのデータを構造体にマッピングする</a></p>
+<p><a href="https://japanese-document.github.io/memo/go/sqlx-join-table.html" rel="nofollow">sqlxでjoinしたテーブルのデータを構造体にマッピングする</a></p>
 </details>
 <details open="">
 <summary>JavaScript</summary>
@@ -81,7 +81,7 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1 id="sqlxでjoinしたデーブルのデータを構造体にマッピングする"><a href="#sqlx%E3%81%A7join%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AB%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B" rel="nofollow">sqlxでjoinしたデーブルのデータを構造体にマッピングする</a></h1>
+      <h1 id="sqlxでjoinしたテーブルのデータを構造体にマッピングする"><a href="#sqlx%E3%81%A7join%E3%81%97%E3%81%9F%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AB%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B" rel="nofollow">sqlxでjoinしたテーブルのデータを構造体にマッピングする</a></h1>
 <p>以下のように<a href="https://go.dev/wiki/Well-known-struct-tags" class="Link" rel="nofollow">struct tags</a>を付与したテーブルの型をjoinに対応した型に埋め込みます。</p>
 <pre><code>package main
 
@@ -145,14 +145,15 @@ func main() {
 		result := db.MustExec(insertUserData, user.Name, user.Email, user.Age)
 		userID, _ := result.LastInsertId()
 
-		insertCarData := `INSERT INTO car (user_id, maker, model, year) VALUES (?, ?, ?, ?)`
+		insertCarData := `INSERT INTO car (user_id, maker, model, year) VALUES (:user_id, :maker, :model, :year)`
 		cars := []Car{
 			{UserID: int(userID), Maker: &#34;Toyota&#34;, Model: &#34;Corolla&#34;, Year: 2020},
 			{UserID: int(userID), Maker: &#34;Honda&#34;, Model: &#34;Civic&#34;, Year: 2018},
 		}
 
-		for _, car := range cars {
-			db.MustExec(insertCarData, car.UserID, car.Maker, car.Model, car.Year)
+		_, err := db.NamedExec(insertCarData, cars)
+		if err != nil {
+			log.Fatal(&#34;Failed to execute query: &#34;, err)
 		}
 	}
 
@@ -173,7 +174,7 @@ func main() {
 </code></pre>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#sqlx%E3%81%A7join%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AB%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B" rel="nofollow">sqlxでjoinしたデーブルのデータを構造体にマッピングする
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#sqlx%E3%81%A7join%E3%81%97%E3%81%9F%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E6%A7%8B%E9%80%A0%E4%BD%93%E3%81%AB%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0%E3%81%99%E3%82%8B" rel="nofollow">sqlxでjoinしたテーブルのデータを構造体にマッピングする
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>

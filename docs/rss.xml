@@ -4,13 +4,13 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 May 2024 00:05:13 JST</pubDate>
-    <lastBuildDate>Thu, 02 May 2024 00:05:13 JST</lastBuildDate>
+    <pubDate>Thu, 02 May 2024 00:29:34 JST</pubDate>
+    <lastBuildDate>Thu, 02 May 2024 00:29:34 JST</lastBuildDate>
   </channel>
   
   <item>
-    <title>sqlxでjoinしたデーブルのデータを構造体にマッピングする</title>
-    <pubDate>Thu, 02 May 2024 08:30:00 JST</pubDate>
+    <title>sqlxでjoinしたテーブルのデータを構造体にマッピングする</title>
+    <pubDate>Thu, 02 May 2024 09:30:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/go/sqlx-join-table.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/go/sqlx-join-table.html</guid>
   </item>
