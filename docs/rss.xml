@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Apr 2024 22:32:07 JST</pubDate>
-    <lastBuildDate>Mon, 29 Apr 2024 22:32:07 JST</lastBuildDate>
+    <pubDate>Thu, 02 May 2024 00:05:13 JST</pubDate>
+    <lastBuildDate>Thu, 02 May 2024 00:05:13 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>sqlxでjoinしたデーブルのデータを構造体にマッピングする</title>
+    <pubDate>Thu, 02 May 2024 08:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/sqlx-join-table.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/sqlx-join-table.html</guid>
+  </item>
   <item>
     <title>Apolloメモ</title>
     <pubDate>Tue, 30 Apr 2024 07:00:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</guid>
-  </item>
-  <item>
-    <title>reduceを使った関数合成</title>
-    <pubDate>Thu, 14 Mar 2024 07:20:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/javascript/function-composition-using-reduce.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/function-composition-using-reduce.html</guid>
   </item>
 </rss>
