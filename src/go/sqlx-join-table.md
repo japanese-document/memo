@@ -1,6 +1,6 @@
-{ "category": "Go",  "order": 8, "date": "2024-05-01 23:30" }
+{ "category": "Go",  "order": 8, "date": "2024-05-02 00:30" }
 ---
-# sqlxでjoinしたデーブルのデータを構造体にマッピングする
+# sqlxでjoinしたテーブルのデータを構造体にマッピングする
 
 以下のように[struct tags](https://go.dev/wiki/Well-known-struct-tags)を付与したテーブルの型をjoinに対応した型に埋め込みます。
 
@@ -67,14 +67,15 @@ func main() {
 		result := db.MustExec(insertUserData, user.Name, user.Email, user.Age)
 		userID, _ := result.LastInsertId()
 
-		insertCarData := `INSERT INTO car (user_id, maker, model, year) VALUES (?, ?, ?, ?)`
+		insertCarData := `INSERT INTO car (user_id, maker, model, year) VALUES (:user_id, :maker, :model, :year)`
 		cars := []Car{
 			{UserID: int(userID), Maker: "Toyota", Model: "Corolla", Year: 2020},
 			{UserID: int(userID), Maker: "Honda", Model: "Civic", Year: 2018},
 		}
 
-		for _, car := range cars {
-			db.MustExec(insertCarData, car.UserID, car.Maker, car.Model, car.Year)
+		_, err := db.NamedExec(insertCarData, cars)
+		if err != nil {
+			log.Fatal("Failed to execute query: ", err)
 		}
 	}
 
