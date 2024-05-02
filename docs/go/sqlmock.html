@@ -6,10 +6,10 @@
     <meta name="twitter:card" content="summary" />
     <meta property="og:url" content="https://japanese-document.github.io/memo/go/sqlmock.html" />
     <meta property="og:title" content="sqlmockメモ" />
-    <meta property="og:description" content="WithArgs()に任意の引数を指定するにはsqlmock.AnyArg()を渡す。sqlxと一緒に使う方法db, mock, err := sqlmock.New()defer db.Close()sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) ExpectExec()に渡す引数はregex.QuoteMeta()を適用して使うと便利" />
+    <meta property="og:description" content="WithArgs()に任意の引数を指定するにはsqlmock.AnyArg()を渡す。sqlxと一緒に使う方法db, mock, err := sqlmock.New()defer db.Close()sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) ExpectExec()に渡す引数はregexp.QuoteMeta()を適用して使うと便利" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="WithArgs()に任意の引数を指定するにはsqlmock.AnyArg()を渡す。sqlxと一緒に使う方法db, mock, err := sqlmock.New()defer db.Close()sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) ExpectExec()に渡す引数はregex.QuoteMeta()を適用して使うと便利" />
+    <meta name="description" content="WithArgs()に任意の引数を指定するにはsqlmock.AnyArg()を渡す。sqlxと一緒に使う方法db, mock, err := sqlmock.New()defer db.Close()sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) ExpectExec()に渡す引数はregexp.QuoteMeta()を適用して使うと便利" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
     <title>sqlmockメモ</title>
@@ -95,7 +95,7 @@ defer db.Close()
 sqlxDB = sqlx.NewDb(db, &#34;postgres&#34;) 
 </code></pre>
 <ul>
-<li><code>ExpectExec()</code>に渡す引数は<a href="https://pkg.go.dev/regexp#QuoteMeta" class="Link" rel="nofollow">regex.QuoteMeta()</a>を適用して使うと便利</li>
+<li><code>ExpectExec()</code>に渡す引数は<a href="https://pkg.go.dev/regexp#QuoteMeta" class="Link" rel="nofollow">regexp.QuoteMeta()</a>を適用して使うと便利</li>
 </ul>
 
     </main>

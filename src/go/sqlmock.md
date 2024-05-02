@@ -1,4 +1,4 @@
-{ "category": "Go",  "order": 7, "date": "2024-04-24 22:30" }
+{ "category": "Go",  "order": 7, "date": "2024-05-02 18:30" }
 ---
 # sqlmockメモ
 
@@ -12,4 +12,4 @@ defer db.Close()
 sqlxDB = sqlx.NewDb(db, "postgres") 
 ```
 
-* `ExpectExec()`に渡す引数は[regex.QuoteMeta()](https://pkg.go.dev/regexp#QuoteMeta)を適用して使うと便利
+* `ExpectExec()`に渡す引数は[regexp.QuoteMeta()](https://pkg.go.dev/regexp#QuoteMeta)を適用して使うと便利
