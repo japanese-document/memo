@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 May 2024 00:29:34 JST</pubDate>
-    <lastBuildDate>Thu, 02 May 2024 00:29:34 JST</lastBuildDate>
+    <pubDate>Thu, 02 May 2024 18:42:15 JST</pubDate>
+    <lastBuildDate>Thu, 02 May 2024 18:42:15 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>sqlmockメモ</title>
+    <pubDate>Fri, 03 May 2024 03:30:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/go/sqlmock.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/sqlmock.html</guid>
+  </item>
   <item>
     <title>sqlxでjoinしたテーブルのデータを構造体にマッピングする</title>
     <pubDate>Thu, 02 May 2024 09:30:00 JST</pubDate>
@@ -25,12 +31,6 @@
     <pubDate>Sun, 28 Apr 2024 23:00:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/javascript/url-can-parse.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/javascript/url-can-parse.html</guid>
-  </item>
-  <item>
-    <title>sqlmockメモ</title>
-    <pubDate>Thu, 25 Apr 2024 07:30:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/go/sqlmock.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/go/sqlmock.html</guid>
   </item>
   <item>
     <title>gqlgenで浅くデータを取得する方法</title>
