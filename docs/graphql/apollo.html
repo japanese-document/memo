@@ -97,6 +97,13 @@
 <li>
 <p><a href="https://www.apollographql.com/docs/react/data/suspense#fetching-with-suspense" class="Link" rel="nofollow">useSuspenseQuery</a>を<code>&lt;Suspense&gt;</code>の子コンポーネントで使うと、リクエスト中はfallbackが表示される。</p>
 </li>
+<li>
+<p><code>&lt;Suspense&gt;</code>の中に<code>&lt;Suspense&gt;</code>を入れると各<code>&lt;Suspense&gt;</code>内でデータを取得すると上位の<code>&lt;Suspense&gt;</code>でのデータ取得を待つ必要があるので表示が遅くなります。<br>
+その場合は<a href="https://www.apollographql.com/docs/react/data/suspense/#avoiding-request-waterfalls" class="Link" rel="nofollow">useLoadableQuery、useBackgroundQuery、useReadQuery</a>を使います。リクエストをスキップするには<a href="https://www.apollographql.com/docs/react/api/react/hooks/#skiptoken" class="Link" rel="nofollow">skipToken</a>を指定します。</p>
+</li>
+<li>
+<p>Reactのスコープの外やルーターと組み合わせて使う場合は<a href="https://www.apollographql.com/docs/react/data/suspense/#initiating-queries-outside-react" class="Link" rel="nofollow">preloadQuery</a>を使う。</p>
+</li>
 </ul>
 
     </main>

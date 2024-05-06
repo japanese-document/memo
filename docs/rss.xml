@@ -4,13 +4,13 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 May 2024 21:27:55 JST</pubDate>
-    <lastBuildDate>Sat, 04 May 2024 21:27:55 JST</lastBuildDate>
+    <pubDate>Mon, 06 May 2024 21:42:32 JST</pubDate>
+    <lastBuildDate>Mon, 06 May 2024 21:42:32 JST</lastBuildDate>
   </channel>
   
   <item>
     <title>Apolloメモ</title>
-    <pubDate>Sun, 05 May 2024 06:00:00 JST</pubDate>
+    <pubDate>Tue, 07 May 2024 06:00:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/graphql/apollo.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/graphql/apollo.html</guid>
   </item>
