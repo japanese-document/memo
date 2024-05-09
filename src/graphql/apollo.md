@@ -1,4 +1,4 @@
-{ "category": "GraphQL",  "order": 4, "date": "2024-05-06 21:00" }
+{ "category": "GraphQL",  "order": 4, "date": "2024-05-09 21:00" }
 ---
 # Apolloメモ
 
@@ -16,3 +16,7 @@ https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirect
 その場合は[useLoadableQuery、useBackgroundQuery、useReadQuery](https://www.apollographql.com/docs/react/data/suspense/#avoiding-request-waterfalls)を使います。リクエストをスキップするには[skipToken](https://www.apollographql.com/docs/react/api/react/hooks/#skiptoken)を指定します。
 
 * Reactのスコープの外やルーターと組み合わせて使う場合は[preloadQuery](https://www.apollographql.com/docs/react/data/suspense/#initiating-queries-outside-react)を使う。
+
+* mutationの結果(loading、errors)を初期化したい場合は[reset](https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status)を使う。(キャッシュは初期化されない)
+
+* mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで[`__typename`と`id`](https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses)(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、[update関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#the-update-function)か、[onQueryUpdatedコールバック関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update)。

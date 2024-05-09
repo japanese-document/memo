@@ -104,6 +104,12 @@
 <li>
 <p>Reactのスコープの外やルーターと組み合わせて使う場合は<a href="https://www.apollographql.com/docs/react/data/suspense/#initiating-queries-outside-react" class="Link" rel="nofollow">preloadQuery</a>を使う。</p>
 </li>
+<li>
+<p>mutationの結果(loading、errors)を初期化したい場合は<a href="https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status" class="Link" rel="nofollow">reset</a>を使う。(キャッシュは初期化されない)</p>
+</li>
+<li>
+<p>mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで<a href="https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses" class="Link" rel="nofollow"><code>__typename</code>と<code>id</code></a>(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、<a href="https://www.apollographql.com/docs/react/data/mutations/#the-update-function" class="Link" rel="nofollow">update関数を定義する</a>か、<a href="https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update" class="Link" rel="nofollow">onQueryUpdatedコールバック関数を定義する</a>。</p>
+</li>
 </ul>
 
     </main>
