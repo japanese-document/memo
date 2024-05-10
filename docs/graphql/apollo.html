@@ -110,6 +110,12 @@
 <li>
 <p>mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで<a href="https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses" class="Link" rel="nofollow"><code>__typename</code>と<code>id</code></a>(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、<a href="https://www.apollographql.com/docs/react/data/mutations/#the-update-function" class="Link" rel="nofollow">update関数を定義する</a>か、<a href="https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update" class="Link" rel="nofollow">onQueryUpdatedコールバック関数を定義する</a>。</p>
 </li>
+<li>
+<p>手動でキャッシュを更新したい場合、<a href="https://www.apollographql.com/docs/react/data/refetching/" class="Link" rel="nofollow">client.refetchQueries()</a>を使う。</p>
+</li>
+<li>
+<p><a href="https://graphql.org/learn/queries/#fragments" class="Link" rel="nofollow">フラグメント</a>は再利用可能な型の部分集合</p>
+</li>
 </ul>
 
     </main>
