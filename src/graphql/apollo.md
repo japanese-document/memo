@@ -1,12 +1,8 @@
-{ "category": "GraphQL",  "order": 4, "date": "2024-05-09 21:00" }
+{ "category": "GraphQL",  "order": 4, "date": "2024-05-11 15:00" }
 ---
 # Apolloメモ
 
-* __typenameとidでデータを特定してキャッシュに反映する。  
-https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching
-
-* 同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要  
-https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects
+## リクエスト 
 
 * 手動でデータを取得するには[refetch](https://www.apollographql.com/docs/react/data/queries/#queryresult-interface-refetch)を使うか、[useLazyQuery](https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery)を使う。
 
@@ -19,8 +15,27 @@ https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirect
 
 * mutationの結果(loading、errors)を初期化したい場合は[reset](https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status)を使う。(キャッシュは初期化されない)
 
+## キャッシュ
+
+* __typenameとidでデータを特定してキャッシュに反映する。  
+https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching
+
+* 同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要  
+https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects
+
 * mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで[`__typename`と`id`](https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses)(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、[update関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#the-update-function)か、[onQueryUpdatedコールバック関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update)。
 
 * 手動でキャッシュを更新したい場合、[client.refetchQueries()](https://www.apollographql.com/docs/react/data/refetching/)を使う。
 
+## フラグメント
+
 * [フラグメント](https://graphql.org/learn/queries/#fragments)は再利用可能な型の部分集合
+
+* 以下のように型のフィールドに[引数](https://graphql.org/learn/schema/#arguments)を渡すことができる  
+```
+type Car {
+  id: ID!
+  name: String!
+  size(unit: LengthUnit = METER): Float
+}
+```

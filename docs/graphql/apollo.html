@@ -6,10 +6,10 @@
     <meta name="twitter:card" content="summary" />
     <meta property="og:url" content="https://japanese-document.github.io/memo/graphql/apollo.html" />
     <meta property="og:title" content="Apolloメモ" />
-    <meta property="og:description" content="__typenameとidでデータを特定してキャッシュに反映する。https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要https://www.apollographql.com/" />
+    <meta property="og:description" content="リクエスト手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspense&amp;g" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="__typenameとidでデータを特定してキャッシュに反映する。https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要https://www.apollographql.com/" />
+    <meta name="description" content="リクエスト手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspense&amp;g" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
     <title>Apolloメモ</title>
@@ -82,15 +82,8 @@
 </nav></div>
     <main class="main markdown-body">
       <h1 id="Apolloメモ"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ</a></h1>
+<h2><a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" rel="nofollow">リクエスト</a></h2>
 <ul>
-<li>
-<p>__typenameとidでデータを特定してキャッシュに反映する。<br>
-<a href="https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching" rel="nofollow">https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching</a></p>
-</li>
-<li>
-<p>同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要<br>
-<a href="https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects" rel="nofollow">https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects</a></p>
-</li>
 <li>
 <p>手動でデータを取得するには<a href="https://www.apollographql.com/docs/react/data/queries/#queryresult-interface-refetch" class="Link" rel="nofollow">refetch</a>を使うか、<a href="https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery" class="Link" rel="nofollow">useLazyQuery</a>を使う。</p>
 </li>
@@ -107,19 +100,48 @@
 <li>
 <p>mutationの結果(loading、errors)を初期化したい場合は<a href="https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status" class="Link" rel="nofollow">reset</a>を使う。(キャッシュは初期化されない)</p>
 </li>
+</ul>
+<h2><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ</a></h2>
+<ul>
+<li>
+<p>__typenameとidでデータを特定してキャッシュに反映する。<br>
+<a href="https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching" rel="nofollow">https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching</a></p>
+</li>
+<li>
+<p>同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要<br>
+<a href="https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects" rel="nofollow">https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects</a></p>
+</li>
 <li>
 <p>mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで<a href="https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses" class="Link" rel="nofollow"><code>__typename</code>と<code>id</code></a>(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、<a href="https://www.apollographql.com/docs/react/data/mutations/#the-update-function" class="Link" rel="nofollow">update関数を定義する</a>か、<a href="https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update" class="Link" rel="nofollow">onQueryUpdatedコールバック関数を定義する</a>。</p>
 </li>
 <li>
 <p>手動でキャッシュを更新したい場合、<a href="https://www.apollographql.com/docs/react/data/refetching/" class="Link" rel="nofollow">client.refetchQueries()</a>を使う。</p>
 </li>
+</ul>
+<h2><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント</a></h2>
+<ul>
 <li>
 <p><a href="https://graphql.org/learn/queries/#fragments" class="Link" rel="nofollow">フラグメント</a>は再利用可能な型の部分集合</p>
 </li>
+<li>
+<p>以下のように型のフィールドに<a href="https://graphql.org/learn/schema/#arguments" class="Link" rel="nofollow">引数</a>を渡すことができる</p>
+</li>
 </ul>
+<pre><code>type Car {
+  id: ID!
+  name: String!
+  size(unit: LengthUnit = METER): Float
+}
+</code></pre>
 
     </main>
     <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ
+</a></p>
+<p class="h2"><a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" rel="nofollow">リクエスト
+</a></p>
+<p class="h2"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ
+</a></p>
+<p class="h2"><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
