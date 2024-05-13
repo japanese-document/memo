@@ -31,6 +31,36 @@ https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirect
 
 * [フラグメント](https://graphql.org/learn/queries/#fragments)は再利用可能な型の部分集合
 
+* 以下のように埋め込むことができる
+
+```js
+const FooFragment = gql`
+  fragment FooFragment on Bar {
+    name
+  }
+`;
+
+const client = new ApolloClient({
+  uri: 'https://example.com/',
+  cache: new InMemoryCache({
+    fragments: createFragmentRegistry(gql`
+      ${UserFragment}
+    `),
+  }),
+});
+```
+
+* フラグメントはそれを使うクエリに[埋め込む](https://www.apollographql.com/docs/react/data/fragments/#example-usage)か[fragmentsオプション]()に登録する必要がある。
+
+* フラグメントをコンポーネントに関連付ける[例](https://www.apollographql.com/docs/react/data/fragments/#creating-colocated-fragments)
+
+* [possibleTypes](https://www.apollographql.com/docs/react/data/fragments/#using-fragments-with-unions-and-interfaces)にinterfaceやunionの親子関係を記述する。  
+https://the-guild.dev/graphql/codegen/plugins/other/fragment-matcher
+
+* [useFragment](https://www.apollographql.com/docs/react/data/fragments/#usefragment)を使うとフラグメントに関連したデータを効率的に取得することができます。
+
+## type
+
 * 以下のように型のフィールドに[引数](https://graphql.org/learn/schema/#arguments)を渡すことができる  
 ```
 type Car {
@@ -39,3 +69,9 @@ type Car {
   size(unit: LengthUnit = METER): Float
 }
 ```
+
+## ディレクティブ
+
+### GraphQL標準のディレクティブ
+
+https://spec.graphql.org/June2018/#sec-Type-System.Directives

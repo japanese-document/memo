@@ -124,8 +124,42 @@
 <p><a href="https://graphql.org/learn/queries/#fragments" class="Link" rel="nofollow">フラグメント</a>は再利用可能な型の部分集合</p>
 </li>
 <li>
-<p>以下のように型のフィールドに<a href="https://graphql.org/learn/schema/#arguments" class="Link" rel="nofollow">引数</a>を渡すことができる</p>
+<p>以下のように埋め込むことができる</p>
 </li>
+</ul>
+<pre><code>const FooFragment = gql`
+  fragment FooFragment on Bar {
+    name
+  }
+`;
+
+const client = new ApolloClient({
+  uri: &#39;https://example.com/&#39;,
+  cache: new InMemoryCache({
+    fragments: createFragmentRegistry(gql`
+      ${UserFragment}
+    `),
+  }),
+});
+</code></pre>
+<ul>
+<li>
+<p>フラグメントはそれを使うクエリに<a href="https://www.apollographql.com/docs/react/data/fragments/#example-usage" class="Link" rel="nofollow">埋め込む</a>か<a class="Link">fragmentsオプション</a>に登録する必要がある。</p>
+</li>
+<li>
+<p>フラグメントをコンポーネントに関連付ける<a href="https://www.apollographql.com/docs/react/data/fragments/#creating-colocated-fragments" class="Link" rel="nofollow">例</a></p>
+</li>
+<li>
+<p><a href="https://www.apollographql.com/docs/react/data/fragments/#using-fragments-with-unions-and-interfaces" class="Link" rel="nofollow">possibleTypes</a>にinterfaceやunionの親子関係を記述する。<br>
+<a href="https://the-guild.dev/graphql/codegen/plugins/other/fragment-matcher" rel="nofollow">https://the-guild.dev/graphql/codegen/plugins/other/fragment-matcher</a></p>
+</li>
+<li>
+<p><a href="https://www.apollographql.com/docs/react/data/fragments/#usefragment" class="Link" rel="nofollow">useFragment</a>を使うとフラグメントに関連したデータを効率的に取得することができます。</p>
+</li>
+</ul>
+<h2 id="type"><a href="#type" rel="nofollow">type</a></h2>
+<ul>
+<li>以下のように型のフィールドに<a href="https://graphql.org/learn/schema/#arguments" class="Link" rel="nofollow">引数</a>を渡すことができる</li>
 </ul>
 <pre><code>type Car {
   id: ID!
@@ -133,6 +167,9 @@
   size(unit: LengthUnit = METER): Float
 }
 </code></pre>
+<h2><a href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">ディレクティブ</a></h2>
+<h3 id="GraphQL標準のディレクティブ"><a href="#GraphQL%E6%A8%99%E6%BA%96%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">GraphQL標準のディレクティブ</a></h3>
+<p><a href="https://spec.graphql.org/June2018/#sec-Type-System.Directives" rel="nofollow">https://spec.graphql.org/June2018/#sec-Type-System.Directives</a></p>
 
     </main>
     <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ
@@ -142,6 +179,12 @@
 <p class="h2"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ
 </a></p>
 <p class="h2"><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント
+</a></p>
+<p class="h2"><a href="#type" rel="nofollow">type
+</a></p>
+<p class="h2"><a href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">ディレクティブ
+</a></p>
+<p class="h3"><a href="#GraphQL%E6%A8%99%E6%BA%96%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">GraphQL標準のディレクティブ
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
