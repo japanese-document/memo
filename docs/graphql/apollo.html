@@ -170,6 +170,14 @@ const client = new ApolloClient({
 <h2><a href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">ディレクティブ</a></h2>
 <h3 id="GraphQL標準のディレクティブ"><a href="#GraphQL%E6%A8%99%E6%BA%96%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">GraphQL標準のディレクティブ</a></h3>
 <p><a href="https://spec.graphql.org/June2018/#sec-Type-System.Directives" rel="nofollow">https://spec.graphql.org/June2018/#sec-Type-System.Directives</a></p>
+<h3 id="_client"><a href="#_client" rel="nofollow">@client</a></h3>
+<p>フィールドがローカルに存在するデータであり、そのデータ取得がサーバーへのクエリではなくクライアント側のキャッシュまたはローカルストアから行われることを示すフラグとして機能します。</p>
+<h3 id="_connect"><a href="#_connect" rel="nofollow">@connect</a></h3>
+<p><code>@connection</code>ディレクティブを付与すると、同じクエリでも<code>@connection</code>ディレクティブに与えられた値毎に別のクエリとして区別されます。これによって、同じクエリで用途に応じて複数の値をキャッシュすることができます。</p>
+<h3 id="_defer"><a href="#_defer" rel="nofollow">@defer</a></h3>
+<p>指定したフィールドを遅延的に取得する。</p>
+<h3 id="_export"><a href="#_export" rel="nofollow">@export</a></h3>
+<p>指定したフィールドを変数として使うことができるようにする。</p>
 
     </main>
     <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ
@@ -185,6 +193,14 @@ const client = new ApolloClient({
 <p class="h2"><a href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">ディレクティブ
 </a></p>
 <p class="h3"><a href="#GraphQL%E6%A8%99%E6%BA%96%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">GraphQL標準のディレクティブ
+</a></p>
+<p class="h3"><a href="#_client" rel="nofollow">@client
+</a></p>
+<p class="h3"><a href="#_connect" rel="nofollow">@connect
+</a></p>
+<p class="h3"><a href="#_defer" rel="nofollow">@defer
+</a></p>
+<p class="h3"><a href="#_export" rel="nofollow">@export
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
