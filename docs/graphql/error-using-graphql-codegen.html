@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="https://japanese-document.github.io/memo/mac/command.html" />
-    <meta property="og:title" content="⌘" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://japanese-document.github.io/memo/graphql/error-using-graphql-codegen.html" />
+    <meta property="og:title" content="graphql-codegenのエラー" />
+    <meta property="og:description" content="graphql-codegenを実行すると下記のエラーが発生しました。GraphQL Document Validation failed with 1 errors;Error 0: This anonymous operation must be the only defined operation.下記のようにqueryやmutationに名前を付与することで解決しました。mutation (: N" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="" />
+    <meta name="description" content="graphql-codegenを実行すると下記のエラーが発生しました。GraphQL Document Validation failed with 1 errors;Error 0: This anonymous operation must be the only defined operation.下記のようにqueryやmutationに名前を付与することで解決しました。mutation (: N" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
-    <title>⌘</title>
+    <title>graphql-codegenのエラー</title>
     <link rel="stylesheet" href="https://japanese-document.github.io/memo/app.css?v=5909b1d1-6e6f-5bcd-b03d-fa7e680a46a6" type="text/css"  media="all" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9VVC74WWF"></script>
     <script>
@@ -82,10 +82,17 @@
 </details>
 </nav></div>
     <main class="main markdown-body">
-      <h1><a href="#%E2%8C%98" rel="nofollow">⌘</a></h1>
+      <h1 id="graphql-codegenのエラー"><a href="#graphql-codegen%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC" rel="nofollow">graphql-codegenのエラー</a></h1>
+<p><a href="https://github.com/dotansimha/graphql-code-generator" class="Link" rel="nofollow">graphql-codegen</a>を実行すると下記のエラーが発生しました。</p>
+<pre><code>GraphQL Document Validation failed with 1 errors;
+Error 0: This anonymous operation must be the only defined operation.
+</code></pre>
+<p>下記のようにqueryやmutationに名前を付与することで解決しました。</p>
+<p><code>mutation ($input: NewTodo!) {</code> -&gt; <code>mutation add ($input: NewTodo!) {</code></p>
+<p><code>query {</code> -&gt; <code>query todos {</code></p>
 
     </main>
-    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#%E2%8C%98" rel="nofollow">⌘
+    <div class="right-side"><nav class="header-list"><p class="h1"><a href="#graphql-codegen%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC" rel="nofollow">graphql-codegenのエラー
 </a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>

@@ -4,10 +4,16 @@
     <description>Memo</description>
     <link>https://japanese-document.github.io/memo</link>
     <atom:link href="https://japanese-document.github.io/memo/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 May 2024 21:29:45 JST</pubDate>
-    <lastBuildDate>Mon, 13 May 2024 21:29:45 JST</lastBuildDate>
+    <pubDate>Fri, 17 May 2024 12:17:59 JST</pubDate>
+    <lastBuildDate>Fri, 17 May 2024 12:17:59 JST</lastBuildDate>
   </channel>
   
+  <item>
+    <title>graphql-codegenのエラー</title>
+    <pubDate>Fri, 17 May 2024 21:15:00 JST</pubDate>
+    <link>https://japanese-document.github.io/memo/graphql/error-using-graphql-codegen.html</link>
+    <guid isPermaLink="true">https://japanese-document.github.io/memo/graphql/error-using-graphql-codegen.html</guid>
+  </item>
   <item>
     <title>Apolloメモ</title>
     <pubDate>Tue, 14 May 2024 06:00:00 JST</pubDate>
@@ -121,11 +127,5 @@
     <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
     <link>https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</link>
     <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-appling-style-to-component.html</guid>
-  </item>
-  <item>
-    <title>styled-components用のpropsをコンポーネントに渡さない</title>
-    <pubDate>Thu, 14 Mar 2024 17:10:00 JST</pubDate>
-    <link>https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</link>
-    <guid isPermaLink="true">https://japanese-document.github.io/memo/react/styled-components-not-passing-props.html</guid>
   </item>
 </rss>
