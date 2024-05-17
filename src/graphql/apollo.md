@@ -91,3 +91,7 @@ https://spec.graphql.org/June2018/#sec-Type-System.Directives
 ### @export
 
 指定したフィールドを変数として使うことができるようにする。
+
+### @nonreactive
+
+指定したフィールドが変更されても再レンダリングが発生しないようにする。
