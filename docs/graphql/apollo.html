@@ -112,7 +112,8 @@
 <p>mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで<a href="https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses" class="Link" rel="nofollow"><code>__typename</code>と<code>id</code></a>(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、<a href="https://www.apollographql.com/docs/react/data/mutations/#the-update-function" class="Link" rel="nofollow">update関数を定義する</a>か、<a href="https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update" class="Link" rel="nofollow">onQueryUpdatedコールバック関数を定義する</a>。</p>
 </li>
 <li>
-<p>手動でキャッシュを更新したい場合、<a href="https://www.apollographql.com/docs/react/data/refetching/" class="Link" rel="nofollow">client.refetchQueries()</a>を使う。</p>
+<p>手動でキャッシュを更新したい場合、<a href="https://www.apollographql.com/docs/react/data/refetching/" class="Link" rel="nofollow">client.refetchQueries()</a>を使う。<br>
+Reactではclientは<a href="https://www.apollographql.com/docs/react/api/react/hooks/#useapolloclient" class="Link" rel="nofollow">useApolloClient</a>で取得する。</p>
 </li>
 </ul>
 <h3><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%81%AE%E3%82%AD%E3%83%BC" rel="nofollow">キャッシュのキー</a></h3>
@@ -126,6 +127,13 @@
 <a href="https://www.apollographql.com/docs/react/caching/cache-interaction" rel="nofollow">https://www.apollographql.com/docs/react/caching/cache-interaction</a></p>
 </li>
 </ul>
+<h3><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B" rel="nofollow">キャッシュを操作する</a></h3>
+<h4><a href="#%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">クエリで操作</a></h4>
+<p>readQuery / writeQuery / updateQuery</p>
+<h4><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">フラグメントで操作</a></h4>
+<p>readFragment / writeFragment / updateFragment / useFragment</p>
+<h4><a href="#%E6%89%8B%E5%8B%95%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">手動で操作</a></h4>
+<p><a href="https://www.apollographql.com/docs/react/caching/cache-interaction/#using-cachemodify" class="Link" rel="nofollow">cache.modify</a></p>
 <h2><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント</a></h2>
 <ul>
 <li>
@@ -197,6 +205,14 @@ const client = new ApolloClient({
 <p class="h2"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ
 </a></p>
 <p class="h3"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%81%AE%E3%82%AD%E3%83%BC" rel="nofollow">キャッシュのキー
+</a></p>
+<p class="h3"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B" rel="nofollow">キャッシュを操作する
+</a></p>
+<p class="h4"><a href="#%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">クエリで操作
+</a></p>
+<p class="h4"><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">フラグメントで操作
+</a></p>
+<p class="h4"><a href="#%E6%89%8B%E5%8B%95%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">手動で操作
 </a></p>
 <p class="h2"><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント
 </a></p>
