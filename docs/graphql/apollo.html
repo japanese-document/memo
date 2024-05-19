@@ -105,10 +105,6 @@
 <h2><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ</a></h2>
 <ul>
 <li>
-<p>__typenameとidでデータを特定してキャッシュに反映する。<br>
-<a href="https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching" rel="nofollow">https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching</a></p>
-</li>
-<li>
 <p>同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要<br>
 <a href="https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects" rel="nofollow">https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects</a></p>
 </li>
@@ -117,6 +113,17 @@
 </li>
 <li>
 <p>手動でキャッシュを更新したい場合、<a href="https://www.apollographql.com/docs/react/data/refetching/" class="Link" rel="nofollow">client.refetchQueries()</a>を使う。</p>
+</li>
+</ul>
+<h3><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%81%AE%E3%82%AD%E3%83%BC" rel="nofollow">キャッシュのキー</a></h3>
+<ul>
+<li>
+<p>デフォルトでは<code>__typename</code>と<code>id</code>でデータを特定してキャッシュに反映する。<br>
+<a href="https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching" rel="nofollow">https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching</a></p>
+</li>
+<li>
+<p>キーに使用するプロパティやキーの生成方法を変更することができる。
+<a href="https://www.apollographql.com/docs/react/caching/cache-interaction" rel="nofollow">https://www.apollographql.com/docs/react/caching/cache-interaction</a></p>
 </li>
 </ul>
 <h2><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント</a></h2>
@@ -188,6 +195,8 @@ const client = new ApolloClient({
 <p class="h2"><a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" rel="nofollow">リクエスト
 </a></p>
 <p class="h2"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ
+</a></p>
+<p class="h3"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%81%AE%E3%82%AD%E3%83%BC" rel="nofollow">キャッシュのキー
 </a></p>
 <p class="h2"><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント
 </a></p>

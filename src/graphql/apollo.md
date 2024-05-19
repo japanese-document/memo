@@ -17,15 +17,20 @@
 
 ## キャッシュ
 
-* __typenameとidでデータを特定してキャッシュに反映する。  
-https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching
-
 * 同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要  
 https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects
 
 * mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで[`__typename`と`id`](https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses)(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、[update関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#the-update-function)か、[onQueryUpdatedコールバック関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update)。
 
 * 手動でキャッシュを更新したい場合、[client.refetchQueries()](https://www.apollographql.com/docs/react/data/refetching/)を使う。
+
+### キャッシュのキー
+
+* デフォルトでは`__typename`と`id`でデータを特定してキャッシュに反映する。  
+https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching
+
+* キーに使用するプロパティやキーの生成方法を変更することができる。
+https://www.apollographql.com/docs/react/caching/cache-interaction
 
 ## フラグメント
 
