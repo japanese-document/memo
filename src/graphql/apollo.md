@@ -22,7 +22,8 @@ https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirect
 
 * mutationの結果をキャッシュに反映したい場合は、mutationのレスポンスで[`__typename`と`id`](https://www.apollographql.com/docs/react/data/mutations/#include-modified-objects-in-mutation-responses)(mutationの戻り値だけではidに対応するデータを取得する目的のキャッシュを変更することはできるが、キャッシュされている配列の中に存在するデータを変更することはできない)を返すか、[update関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#the-update-function)か、[onQueryUpdatedコールバック関数を定義する](https://www.apollographql.com/docs/react/data/mutations/#refetching-after-update)。
 
-* 手動でキャッシュを更新したい場合、[client.refetchQueries()](https://www.apollographql.com/docs/react/data/refetching/)を使う。
+* 手動でキャッシュを更新したい場合、[client.refetchQueries()](https://www.apollographql.com/docs/react/data/refetching/)を使う。  
+Reactではclientは[useApolloClient](https://www.apollographql.com/docs/react/api/react/hooks/#useapolloclient)で取得する。
 
 ### キャッシュのキー
 
@@ -31,6 +32,20 @@ https://www.apollographql.com/docs/react/why-apollo/#zero-config-caching
 
 * キーに使用するプロパティやキーの生成方法を変更することができる。
 https://www.apollographql.com/docs/react/caching/cache-interaction
+
+### キャッシュを操作する
+
+#### クエリで操作
+
+readQuery / writeQuery / updateQuery
+
+#### フラグメントで操作
+
+readFragment / writeFragment / updateFragment / useFragment
+
+#### 手動で操作
+
+[cache.modify](https://www.apollographql.com/docs/react/caching/cache-interaction/#using-cachemodify)
 
 ## フラグメント
 
