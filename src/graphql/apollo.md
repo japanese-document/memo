@@ -15,6 +15,8 @@
 
 * mutationの結果(loading、errors)を初期化したい場合は[reset](https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status)を使う。(キャッシュは初期化されない)
 
+* 取得してデータを変更してはいけない。
+
 ## キャッシュ
 
 * 同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要  
@@ -35,13 +37,20 @@ https://www.apollographql.com/docs/react/caching/cache-interaction
 
 ### キャッシュを操作する
 
+以下はクエリのみ操作する。つまり、サーバにリクエストが送信されない。
+Apollo Clientは[InMemoryCache](https://www.apollographql.com/docs/react/api/cache/InMemoryCache/)をプロキシしている。
+
 #### クエリで操作
 
-readQuery / writeQuery / updateQuery
+[client.readQuery](https://www.apollographql.com/docs/react/caching/cache-interaction#readquery) / [client.writeQuery](https://www.apollographql.com/docs/react/caching/cache-interaction#writequery) / [client.updateQuery](https://www.apollographql.com/docs/react/api/cache/InMemoryCache/#updatequery)
+
+##### readQuery
+
+キャッシュに対応する値がない場合は`null`を返す。
 
 #### フラグメントで操作
 
-readFragment / writeFragment / updateFragment / useFragment
+`client.readFragment` / `client.writeFragment` / [client.updateFragment](https://www.apollographql.com/docs/react/api/cache/InMemoryCache/#updatefragment) / `client.useFragment`
 
 #### 手動で操作
 

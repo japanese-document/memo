@@ -101,6 +101,9 @@
 <li>
 <p>mutationの結果(loading、errors)を初期化したい場合は<a href="https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status" class="Link" rel="nofollow">reset</a>を使う。(キャッシュは初期化されない)</p>
 </li>
+<li>
+<p>取得してデータを変更してはいけない。</p>
+</li>
 </ul>
 <h2><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ</a></h2>
 <ul>
@@ -128,10 +131,14 @@ Reactではclientは<a href="https://www.apollographql.com/docs/react/api/react/
 </li>
 </ul>
 <h3><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B" rel="nofollow">キャッシュを操作する</a></h3>
+<p>以下はクエリのみ操作する。つまり、サーバにリクエストが送信されない。
+Apollo Clientは<a href="https://www.apollographql.com/docs/react/api/cache/InMemoryCache/" class="Link" rel="nofollow">InMemoryCache</a>をプロキシしている。</p>
 <h4><a href="#%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">クエリで操作</a></h4>
-<p>readQuery / writeQuery / updateQuery</p>
+<p><a href="https://www.apollographql.com/docs/react/caching/cache-interaction#readquery" class="Link" rel="nofollow">client.readQuery</a> / <a href="https://www.apollographql.com/docs/react/caching/cache-interaction#writequery" class="Link" rel="nofollow">client.writeQuery</a> / <a href="https://www.apollographql.com/docs/react/api/cache/InMemoryCache/#updatequery" class="Link" rel="nofollow">client.updateQuery</a></p>
+<h5 id="readQuery"><a href="#readQuery" rel="nofollow">readQuery</a></h5>
+<p>キャッシュに対応する値がない場合は<code>null</code>を返す。</p>
 <h4><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">フラグメントで操作</a></h4>
-<p>readFragment / writeFragment / updateFragment / useFragment</p>
+<p><code>client.readFragment</code> / <code>client.writeFragment</code> / <a href="https://www.apollographql.com/docs/react/api/cache/InMemoryCache/#updatefragment" class="Link" rel="nofollow">client.updateFragment</a> / <code>client.useFragment</code></p>
 <h4><a href="#%E6%89%8B%E5%8B%95%E3%81%A7%E6%93%8D%E4%BD%9C" rel="nofollow">手動で操作</a></h4>
 <p><a href="https://www.apollographql.com/docs/react/caching/cache-interaction/#using-cachemodify" class="Link" rel="nofollow">cache.modify</a></p>
 <h2><a href="#%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88" rel="nofollow">フラグメント</a></h2>
