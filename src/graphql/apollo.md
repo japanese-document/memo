@@ -44,6 +44,10 @@ Apollo Clientは[InMemoryCache](https://www.apollographql.com/docs/react/api/cac
 
 [client.readQuery](https://www.apollographql.com/docs/react/caching/cache-interaction#readquery) / [client.writeQuery](https://www.apollographql.com/docs/react/caching/cache-interaction#writequery) / [client.updateQuery](https://www.apollographql.com/docs/react/api/cache/InMemoryCache/#updatequery)
 
+* `client.writeQuery`で既存のデータを上書きすることができる。データの一部を渡した場合、その部分のみ上書きされる。
+
+* `updateFragment`と`updateQuery`はデータを取得して、それを基に上書きする処理ができる。
+
 ##### readQuery
 
 キャッシュに対応する値がない場合は`null`を返す。
@@ -55,6 +59,17 @@ Apollo Clientは[InMemoryCache](https://www.apollographql.com/docs/react/api/cac
 #### 手動で操作
 
 [cache.modify](https://www.apollographql.com/docs/react/caching/cache-interaction/#using-cachemodify)
+
+[cache.identify(obj)](https://www.apollographql.com/docs/react/caching/cache-interaction#obtaining-an-objects-cache-id)は`obj`のidを取得する。
+
+refのフィールドにアクセスるには`readField()`を使う。
+
+useMutationで使用するとサーバへのアクセスなしにキャッシュを変更することができる。
+
+#### キャッシュからデータを削除する
+
+`cache.evict({ id: 'foo-id' })`はidが`'foo-id'`のデータをキャッシュから削除します。
+`cache.gc()`で孤立したデータを削除する。
 
 ## フラグメント
 
