@@ -19,6 +19,8 @@
 
 ## キャッシュ
 
+* クエリとそのパラメータごとにキャッシュされる。
+
 * 同じクエリはキャッシュを利用することができるが、別のクエリで使用するには設定が必要  
 https://www.apollographql.com/docs/react/caching/advanced-topics/#cache-redirects
 
@@ -70,6 +72,14 @@ useMutationで使用するとサーバへのアクセスなしにキャッシュ
 
 `cache.evict({ id: 'foo-id' })`はidが`'foo-id'`のデータをキャッシュから削除します。
 `cache.gc()`で孤立したデータを削除する。
+
+すべてのキャッシュをクリアするには`client.clearStore()`を使う。
+
+#### fetchMore
+
+* パラメータを無視してクエリ毎にキャッシュするには`typePolicies`を設定する。
+
+* キャッシュされたデータの取得方法を変更するには`typePolicies`の`read`を変更する。
 
 ## フラグメント
 
