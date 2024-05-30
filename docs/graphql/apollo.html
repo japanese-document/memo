@@ -230,6 +230,21 @@ const client = new ApolloClient({
 <p>指定したフィールドを変数として使うことができるようにする。</p>
 <h3 id="_nonreactive"><a href="#_nonreactive" rel="nofollow">@nonreactive</a></h3>
 <p>指定したフィールドが変更されても再レンダリングが発生しないようにする。</p>
+<h2><a href="#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88" rel="nofollow">ローカルステート</a></h2>
+<h3><a href="#%E3%83%AA%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">リアクティブ</a></h3>
+<p><code>makeVar</code>関数を<code>read</code>関数か<code>useReactiveVar</code>フックを使ってリアクティブな処理にします。</p>
+<p>値を取得するには<code>makeVar</code>関数の戻り値の関数を実行する。</p>
+<h3 id="_client"><a href="#_client" rel="nofollow">@client</a></h3>
+<p><code>@client</code>ディレクティブをクエリのフィールドに付与するとローカルにのみ有効なフィールドになる。</p>
+<p><code>@clinet</code>ディレクティブが付与されたフィールドの値を生成は<code>typePolicies</code>の<code>read</code>関数で行う。</p>
+<p><code>@client @export(as: &#34;authorId&#34;)</code>のようにローカルステートのフィールドをクエリで使うことができます。</p>
+<h3><a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E7%94%A8%E3%81%AE%E3%82%AF%E3%82%A8%E3%83%AA%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B" rel="nofollow">クライアント用のクエリを定義する</a></h3>
+<p><a href="https://www.apollographql.com/docs/react/local-state/client-side-schema/" class="Link" rel="nofollow">typeDefs</a>に<code>extend type</code>したクエリを指定する。</p>
+<h2><a href="#%E3%83%86%E3%82%B9%E3%83%88" rel="nofollow">テスト</a></h2>
+<p><a href="https://www.apollographql.com/docs/react/development-testing/testing" rel="nofollow">https://www.apollographql.com/docs/react/development-testing/testing</a></p>
+<h2></h2>
+<p>バンドルサイズを小さくする方法
+<a href="https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size" rel="nofollow">https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size</a></p>
 
     </main>
     <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ
@@ -269,7 +284,18 @@ const client = new ApolloClient({
 <p class="h3"><a href="#_export" rel="nofollow">@export
 </a></p>
 <p class="h3"><a href="#_nonreactive" rel="nofollow">@nonreactive
-</a></p></nav></div>
+</a></p>
+<p class="h2"><a href="#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88" rel="nofollow">ローカルステート
+</a></p>
+<p class="h3"><a href="#%E3%83%AA%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96" rel="nofollow">リアクティブ
+</a></p>
+<p class="h3"><a href="#_client" rel="nofollow">@client
+</a></p>
+<p class="h3"><a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E7%94%A8%E3%81%AE%E3%82%AF%E3%82%A8%E3%83%AA%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B" rel="nofollow">クライアント用のクエリを定義する
+</a></p>
+<p class="h2"><a href="#%E3%83%86%E3%82%B9%E3%83%88" rel="nofollow">テスト
+</a></p>
+<p class="h2"></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
     </footer>
