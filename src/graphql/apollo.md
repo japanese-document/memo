@@ -149,3 +149,33 @@ https://spec.graphql.org/June2018/#sec-Type-System.Directives
 ### @nonreactive
 
 指定したフィールドが変更されても再レンダリングが発生しないようにする。
+
+## ローカルステート
+
+### リアクティブ
+
+`makeVar`関数を`read`関数か`useReactiveVar`フックを使ってリアクティブな処理にします。
+
+値を取得するには`makeVar`関数の戻り値の関数を実行する。
+
+### @client
+
+`@client`ディレクティブをクエリのフィールドに付与するとローカルにのみ有効なフィールドになる。
+
+`@clinet`ディレクティブが付与されたフィールドの値を生成は`typePolicies`の`read`関数で行う。
+
+`@client @export(as: "authorId")`のようにローカルステートのフィールドをクエリで使うことができます。
+
+### クライアント用のクエリを定義する
+
+[typeDefs](https://www.apollographql.com/docs/react/local-state/client-side-schema/)に`extend type`したクエリを指定する。
+
+## テスト
+
+https://www.apollographql.com/docs/react/development-testing/testing
+
+## 
+
+バンドルサイズを小さくする方法
+https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size
+
