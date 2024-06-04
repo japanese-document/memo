@@ -4,6 +4,8 @@
 
 ## リクエスト 
 
+### Query
+
 * 手動でデータを取得するには[refetch](https://www.apollographql.com/docs/react/data/queries/#queryresult-interface-refetch)を使うか、[useLazyQuery](https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery)を使う。
 
 * [useSuspenseQuery](https://www.apollographql.com/docs/react/data/suspense#fetching-with-suspense)を`<Suspense>`の子コンポーネントで使うと、リクエスト中はfallbackが表示される。
@@ -13,9 +15,20 @@
 
 * Reactのスコープの外やルーターと組み合わせて使う場合は[preloadQuery](https://www.apollographql.com/docs/react/data/suspense/#initiating-queries-outside-react)を使う。
 
+* 取得してデータを変更してはいけない。
+
+### Mutation
+
 * mutationの結果(loading、errors)を初期化したい場合は[reset](https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status)を使う。(キャッシュは初期化されない)
 
-* 取得してデータを変更してはいけない。
+* サーバのレスポンスではなく、リクエスト内容をキャッシュに反映するには`optimisticResponse`を使う。
+
+### Header
+
+* 静的にヘッダーをセットするには[headers](https://www.apollographql.com/docs/react/networking/basic-http-networking)を設定する。
+
+* 動的にヘッダーをセットするには[setContext()](https://www.apollographql.com/docs/react/networking/authentication#header)を使う。
+
 
 ## キャッシュ
 
@@ -174,7 +187,7 @@ https://spec.graphql.org/June2018/#sec-Type-System.Directives
 
 https://www.apollographql.com/docs/react/development-testing/testing
 
-## 
+## パフォーマンス 
 
 バンドルサイズを小さくする方法
 https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size
