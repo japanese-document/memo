@@ -6,10 +6,10 @@
     <meta name="twitter:card" content="summary" />
     <meta property="og:url" content="https://japanese-document.github.io/memo/graphql/apollo.html" />
     <meta property="og:title" content="Apolloメモ" />
-    <meta property="og:description" content="リクエスト手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspense&amp;g" />
+    <meta property="og:description" content="リクエストQuery手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspe" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="リクエスト手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspense&amp;g" />
+    <meta name="description" content="リクエストQuery手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspe" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
     <title>Apolloメモ</title>
@@ -84,6 +84,7 @@
     <main class="main markdown-body">
       <h1 id="Apolloメモ"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ</a></h1>
 <h2><a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" rel="nofollow">リクエスト</a></h2>
+<h3 id="Query"><a href="#Query" rel="nofollow">Query</a></h3>
 <ul>
 <li>
 <p>手動でデータを取得するには<a href="https://www.apollographql.com/docs/react/data/queries/#queryresult-interface-refetch" class="Link" rel="nofollow">refetch</a>を使うか、<a href="https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery" class="Link" rel="nofollow">useLazyQuery</a>を使う。</p>
@@ -99,10 +100,25 @@
 <p>Reactのスコープの外やルーターと組み合わせて使う場合は<a href="https://www.apollographql.com/docs/react/data/suspense/#initiating-queries-outside-react" class="Link" rel="nofollow">preloadQuery</a>を使う。</p>
 </li>
 <li>
+<p>取得してデータを変更してはいけない。</p>
+</li>
+</ul>
+<h3 id="Mutation"><a href="#Mutation" rel="nofollow">Mutation</a></h3>
+<ul>
+<li>
 <p>mutationの結果(loading、errors)を初期化したい場合は<a href="https://www.apollographql.com/docs/react/data/mutations/#resetting-mutation-status" class="Link" rel="nofollow">reset</a>を使う。(キャッシュは初期化されない)</p>
 </li>
 <li>
-<p>取得してデータを変更してはいけない。</p>
+<p>サーバのレスポンスではなく、リクエスト内容をキャッシュに反映するには<code>optimisticResponse</code>を使う。</p>
+</li>
+</ul>
+<h3 id="Header"><a href="#Header" rel="nofollow">Header</a></h3>
+<ul>
+<li>
+<p>静的にヘッダーをセットするには<a href="https://www.apollographql.com/docs/react/networking/basic-http-networking" class="Link" rel="nofollow">headers</a>を設定する。</p>
+</li>
+<li>
+<p>動的にヘッダーをセットするには<a href="https://www.apollographql.com/docs/react/networking/authentication#header" class="Link" rel="nofollow">setContext()</a>を使う。</p>
 </li>
 </ul>
 <h2><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ</a></h2>
@@ -242,7 +258,7 @@ const client = new ApolloClient({
 <p><a href="https://www.apollographql.com/docs/react/local-state/client-side-schema/" class="Link" rel="nofollow">typeDefs</a>に<code>extend type</code>したクエリを指定する。</p>
 <h2><a href="#%E3%83%86%E3%82%B9%E3%83%88" rel="nofollow">テスト</a></h2>
 <p><a href="https://www.apollographql.com/docs/react/development-testing/testing" rel="nofollow">https://www.apollographql.com/docs/react/development-testing/testing</a></p>
-<h2></h2>
+<h2><a href="#%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9" rel="nofollow">パフォーマンス</a></h2>
 <p>バンドルサイズを小さくする方法
 <a href="https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size" rel="nofollow">https://www.apollographql.com/docs/react/development-testing/reducing-bundle-size</a></p>
 
@@ -250,6 +266,12 @@ const client = new ApolloClient({
     <div class="right-side"><nav class="header-list"><p class="h1"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ
 </a></p>
 <p class="h2"><a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" rel="nofollow">リクエスト
+</a></p>
+<p class="h3"><a href="#Query" rel="nofollow">Query
+</a></p>
+<p class="h3"><a href="#Mutation" rel="nofollow">Mutation
+</a></p>
+<p class="h3"><a href="#Header" rel="nofollow">Header
 </a></p>
 <p class="h2"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ
 </a></p>
@@ -295,7 +317,8 @@ const client = new ApolloClient({
 </a></p>
 <p class="h2"><a href="#%E3%83%86%E3%82%B9%E3%83%88" rel="nofollow">テスト
 </a></p>
-<p class="h2"></p></nav></div>
+<p class="h2"><a href="#%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9" rel="nofollow">パフォーマンス
+</a></p></nav></div>
     <footer class="footer markdown-body">
       <a href="/memo">Top</a>
     </footer>
