@@ -6,10 +6,10 @@
     <meta name="twitter:card" content="summary" />
     <meta property="og:url" content="https://japanese-document.github.io/memo/graphql/apollo.html" />
     <meta property="og:title" content="Apolloメモ" />
-    <meta property="og:description" content="リクエストQuery手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspe" />
+    <meta property="og:description" content="リクエストレスポンスに応じたデフォルトの処理をセットするhttps://www.apollographql.com/docs/react/networking/advanced-http-networking/#customizing-response-logicfetch関数を変更するhttps://www.apollographql.com/docs/react/networking/advanced-http-networking#custom-fe" />
     <meta property="og:image" content="https://japanese-document.github.io/memo/images/favicon.png" />
     <meta name="theme-color" content="#f1f7fe" />
-    <meta name="description" content="リクエストQuery手動でデータを取得するにはrefetchを使うか、useLazyQueryを使う。useSuspenseQueryを&lt;Suspense&gt;の子コンポーネントで使うと、リクエスト中はfallbackが表示される。&lt;Suspense&gt;の中に&lt;Suspense&gt;を入れると各&lt;Suspe" />
+    <meta name="description" content="リクエストレスポンスに応じたデフォルトの処理をセットするhttps://www.apollographql.com/docs/react/networking/advanced-http-networking/#customizing-response-logicfetch関数を変更するhttps://www.apollographql.com/docs/react/networking/advanced-http-networking#custom-fe" />
     <meta name="Hatena::Bookmark" content="nocomment" />
     <link rel="icon" type="image/png" href="https://japanese-document.github.io/memo/images/favicon.png" />
     <title>Apolloメモ</title>
@@ -84,6 +84,10 @@
     <main class="main markdown-body">
       <h1 id="Apolloメモ"><a href="#Apollo%E3%83%A1%E3%83%A2" rel="nofollow">Apolloメモ</a></h1>
 <h2><a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" rel="nofollow">リクエスト</a></h2>
+<p>レスポンスに応じたデフォルトの処理をセットする<br>
+<a href="https://www.apollographql.com/docs/react/networking/advanced-http-networking/#customizing-response-logic" rel="nofollow">https://www.apollographql.com/docs/react/networking/advanced-http-networking/#customizing-response-logic</a></p>
+<p>fetch関数を変更する<br>
+<a href="https://www.apollographql.com/docs/react/networking/advanced-http-networking#custom-fetching" rel="nofollow">https://www.apollographql.com/docs/react/networking/advanced-http-networking#custom-fetching</a></p>
 <h3 id="Query"><a href="#Query" rel="nofollow">Query</a></h3>
 <ul>
 <li>
@@ -119,6 +123,21 @@
 </li>
 <li>
 <p>動的にヘッダーをセットするには<a href="https://www.apollographql.com/docs/react/networking/authentication#header" class="Link" rel="nofollow">setContext()</a>を使う。</p>
+</li>
+</ul>
+<h2 id="Link"><a href="#Link" rel="nofollow">Link</a></h2>
+<ul>
+<li>
+<p><a href="https://www.apollographql.com/docs/react/api/link/apollo-link-error" class="Link" rel="nofollow">onError</a>はリクエストの後に実行される</p>
+</li>
+<li>
+<p><a href="https://www.apollographql.com/docs/react/api/link/introduction/#the-forward-function" class="Link" rel="nofollow">forward</a>で次のリンクに移動</p>
+</li>
+<li>
+<p><a href="https://www.apollographql.com/docs/react/api/link/introduction/#handling-a-response" class="Link" rel="nofollow">forwaordの戻り値のmap()</a>でリクエスト後の処理を登録することができる</p>
+</li>
+<li>
+<p>Operationオブジェクトの<a href="https://www.apollographql.com/docs/react/api/link/introduction/#managing-context" class="Link" rel="nofollow">setContext()</a>の<a href="https://www.apollographql.com/docs/react/api/link/apollo-link-http#context-options" class="Link" rel="nofollow">context</a></p>
 </li>
 </ul>
 <h2><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ</a></h2>
@@ -272,6 +291,8 @@ const client = new ApolloClient({
 <p class="h3"><a href="#Mutation" rel="nofollow">Mutation
 </a></p>
 <p class="h3"><a href="#Header" rel="nofollow">Header
+</a></p>
+<p class="h2"><a href="#Link" rel="nofollow">Link
 </a></p>
 <p class="h2"><a href="#%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" rel="nofollow">キャッシュ
 </a></p>

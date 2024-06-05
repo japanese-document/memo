@@ -4,6 +4,12 @@
 
 ## リクエスト 
 
+レスポンスに応じたデフォルトの処理をセットする  
+https://www.apollographql.com/docs/react/networking/advanced-http-networking/#customizing-response-logic
+
+fetch関数を変更する  
+https://www.apollographql.com/docs/react/networking/advanced-http-networking#custom-fetching
+
 ### Query
 
 * 手動でデータを取得するには[refetch](https://www.apollographql.com/docs/react/data/queries/#queryresult-interface-refetch)を使うか、[useLazyQuery](https://www.apollographql.com/docs/react/data/queries/#manual-execution-with-uselazyquery)を使う。
@@ -28,6 +34,16 @@
 * 静的にヘッダーをセットするには[headers](https://www.apollographql.com/docs/react/networking/basic-http-networking)を設定する。
 
 * 動的にヘッダーをセットするには[setContext()](https://www.apollographql.com/docs/react/networking/authentication#header)を使う。
+
+## Link
+
+* [onError](https://www.apollographql.com/docs/react/api/link/apollo-link-error)はリクエストの後に実行される
+
+* [forward](https://www.apollographql.com/docs/react/api/link/introduction/#the-forward-function)で次のリンクに移動
+
+* [forwaordの戻り値のmap()](https://www.apollographql.com/docs/react/api/link/introduction/#handling-a-response)でリクエスト後の処理を登録することができる
+
+* Operationオブジェクトの[setContext()](https://www.apollographql.com/docs/react/api/link/introduction/#managing-context)の[context](https://www.apollographql.com/docs/react/api/link/apollo-link-http#context-options)
 
 
 ## キャッシュ
